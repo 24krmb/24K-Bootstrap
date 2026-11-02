@@ -75,12 +75,11 @@ html {line-height: 1.15;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {display: block}
 
 body[data-theme-version="dark"] {/* 暗色覆盖 */
-  --primary:#F4D1B4;--bc1: #181818;--bc2: #232323;--border:rgba(255,255,255,0.1);
+  --primary:#F4D1B4;--24k-menu-hover-bg: #F4D1B4;--24k-item-hover-bg: rgba(244, 209, 180,.1);
+  --bc1: #181818;--bc2: #232323;--border:rgba(255,255,255,0.1);--box-shadow:none;
+  --btntxt:#232323;
   --24k-bg-sidebar: #232323;
   --24k-bg-sidebar-sub: #232323;
-  --24k-bg-card: #232323;
-  --24k-menu-hover-bg: #232323;
-  --24k-item-hover-bg: #181818;
   --24k-text: #abafb3;
   --24k-menu-link: #ddd;
   --24k-menu-link-strong: #abafb3;
@@ -94,12 +93,11 @@ body[data-theme-version="dark"] {/* 暗色覆盖 */
   .header .theme-toggle-btn i {vertical-align: middle}
 
 body {/* 24K 主题变量（亮色默认） */
-  --primary:#7571f9;--bc1: #F3F3F9;--bc2: #fff;--border:rgba(255,255,255,.9);
+  --primary:#7571f9;--24k-menu-hover-bg:#7571f9;--24k-item-hover-bg: rgba(117, 113, 249,.1);
+  --bc1: #F3F3F9;--bc2: #fff;--border:rgba(255,255,255,.9);--box-shadow:#a99de7;
+  --btntxt:#fff;
   --24k-bg-sidebar: #fff;
   --24k-bg-sidebar-sub: #fafafa;
-  --24k-bg-card: #fff;
-  --24k-menu-hover-bg: #F3F1FA;
-  --24k-item-hover-bg: #F3F1FA;
   --24k-text: #76838f;
   --24k-menu-link: #464a53;
   --24k-menu-link-strong: #464a53;
@@ -7922,17 +7920,17 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
       .nk-sidebar .metismenu > li > a {
         transition: none}
       .nk-sidebar .metismenu > li:hover i, .nk-sidebar .metismenu > li:focus i, .nk-sidebar .metismenu > li.active i {
-        color: var(--24k-menu-link-strong) !important}
+        color: var(--btntxt) !important}
       .nk-sidebar .metismenu > li:hover span, .nk-sidebar .metismenu > li:focus span, .nk-sidebar .metismenu > li.active span {
-        color: var(--24k-menu-link)}
+        color: var(--btntxt)}
       .nk-sidebar .metismenu > li:hover > a {
         background: var(--24k-menu-hover-bg);
         color: var(--24k-menu-hover-text)}
       .nk-sidebar .metismenu > li.active > a {
-        background: var(--24k-menu-active-bg);
+        background: var(--primary);
         color: var(--24k-menu-active-text)}
       .nk-sidebar .metismenu > li.active ul a {
-        color: var(--24k-menu-link-strong)}
+        *color: var(--24k-menu-link-strong)}
       .nk-sidebar .metismenu > li a > i {
         font-size: 0.95rem;
         display: inline-block;
@@ -7952,11 +7950,11 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     .nk-sidebar .metismenu ul ul a {
       padding: 0.625rem 0.9375rem 0.625rem 3.75rem}
     .nk-sidebar .metismenu .mega-menu ul.in li a:hover, .nk-sidebar .metismenu .mega-menu ul.in li a:focus, .nk-sidebar .metismenu .mega-menu ul.in li a.active {
-      color: #7571f9}
+      color:var(--primary)}
     .nk-sidebar .metismenu a {
       transition: all 0.4s ease-in-out}
       .nk-sidebar .metismenu a:hover, .nk-sidebar .metismenu a:active, .nk-sidebar .metismenu a.active {
-        text-decoration: none;
+        text-decoration: none;color: var(--primary);
         background-color: var(--24k-item-hover-bg)}
     .nk-sidebar .metismenu .has-arrow:after {
       position: absolute;
@@ -9236,22 +9234,11 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   color: #515E75;
   margin-bottom: 20px}
 
-.login-form__btn {
-  background: #455F98;
-  color: #fff;
-  padding: 13px 40px;
-  font-size: 14px}
-  .login-form__btn i, .login-form__btn span {
-    font-size: 16px;
-    padding-right: 5px}
-  .login-form__btn.submit {
-    padding: 15px 40px;
-    background: #7571f9;
-    font-weight: 700}
+.login-form__btn {background: var(--primary);color: var(--btntxt);padding: 13px 40px;font-size: 14px}
+  .login-form__btn i, .login-form__btn span {font-size: 16px;padding-right: 5px}
+  .login-form__btn.submit {padding: 15px 40px;background: var(--primary);font-weight: 700}
 
-.login-form__intro p, .login-form__intro h4 {
-  margin-bottom: 0;
-  color: #6A7890}
+.login-form__intro p, .login-form__intro h4 {margin-bottom: 0;color: #6A7890}
 
 .login-form__intro h4 {
   padding: 10px 0}
@@ -9269,7 +9256,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     background: transparent;
     border: 0;
     border-radius: 0;
-    border-bottom: 1px solid #f5f5f5;
+    border-bottom: 1px solid var(--border);
     padding-left: 0;
     color: #7A88A1}
 
@@ -11012,8 +10999,8 @@ table.dataTable thead .sorting::after {
   margin-bottom: 30px;
   border: 0px;
   border-radius: 0.625rem;
-  background-color: var(--24k-bg-card);
-  box-shadow: 6px 11px 41px -28px #a99de7}
+  background-color: var(--bc2);
+  box-shadow: 6px 11px 41px -28px var(--box-shadow)}
   .card-title {
     font-size: 18px;
     font-weight: 500;
@@ -13780,8 +13767,6 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
   background-color: #fff}
   [data-sibebarbg="color_1"] .nk-sidebar .metismenu > li {
     color: #232323}
-    [data-sibebarbg="color_1"] .nk-sidebar .metismenu > li ul a {
-      color: #76838f}
 
 [data-sibebarbg="color_2"] .nk-sidebar {
   background-color: #232323 !important}
@@ -14107,10 +14092,6 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
   [data-theme-version="dark"] .border {
     border: 1px solid rgba(120, 130, 140, 0.13) !important}
 
-[data-theme-version="dark"] .card {
-  box-shadow: none}
-  [data-theme-version="dark"] .card:hover {
-    box-shadow: none}
   [data-theme-version="dark"] .card.transparent-card {
     background: transparent}
   [data-theme-version="dark"] .card-footer {
@@ -14132,13 +14113,9 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
   [data-theme-version="dark"] .nk-sidebar .metismenu > li.active > a {
     background: var(--24k-menu-active-bg) !important;
     color: var(--24k-menu-active-text)}
-  [data-theme-version="dark"] .nk-sidebar .metismenu > li a > i {
-    color: var(--24k-menu-link-strong)}
+
   [data-theme-version="dark"] .nk-sidebar .metismenu a {
     color: var(--24k-menu-link)}
-
-[data-theme-version="dark"] .nk-sidebar .metismenu .mega-menu ul.in li a:hover, [data-theme-version="dark"] .nk-sidebar .metismenu .mega-menu ul.in li a:focus, [data-theme-version="dark"] .nk-sidebar .metismenu .mega-menu ul.in li a.active {
-  background-color: #181818}
 
 [data-theme-version="dark"] #preloader {
   background: #181818}

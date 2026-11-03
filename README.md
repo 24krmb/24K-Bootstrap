@@ -17,7 +17,6 @@
 | 字体     | Google Fonts — Noto Sans SC（400/500/700）                                                                          |
 | 图表     | Chart.js、Chartist、Morris、Flot、ECharts、Highcharts、C3、Rickshaw、Sparkline、Peity 等                                    |
 | 图标     | Font Awesome、Material Design Icons、Themify、Ionicons、Simple Line Icons、Weather Icons、Flag Icons、CryptoCoins 等 10 套 |
-| 富文本编辑器 | CKEditor、TinyMCE、Summernote、Quill、wysihtml5                                                                       |
 | 数据表格   | DataTables、FooTable、jsGrid、jQuery Bootgrid                                                                        |
 | 其他常用插件 | FullCalendar、SweetAlert(2)、Toastr、Select2、DataMaps、Moment.js、NouiSlider、Dropify、Cropper.js 等 120+ 插件              |
 

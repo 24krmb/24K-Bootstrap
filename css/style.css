@@ -112,7 +112,7 @@ address{margin-bottom:1rem;font-style:normal;line-height:inherit}
 dl,ol,ul{margin-top:0;margin-bottom:1rem}
 ol ol,ol ul,ul ol,ul ul{margin-bottom:0}dt{font-weight:700}dd{margin-bottom:.5rem;margin-left:0}blockquote{margin:0 0 1rem}dfn{font-style:italic}b,strong{font-weight:bolder}small{font-size:80%}sub,sup{position:relative;font-size:75%;line-height:0;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}
 a{color:var(--primary);text-decoration:none;background-color:transparent;-webkit-text-decoration-skip:objects}
-a:hover{color:#2e28f6;text-decoration:underline}
+a:hover{color:var(--primary);text-decoration:underline}
 a:not([href]):not([tabindex]){color:inherit;text-decoration:none}
 a:not([href]):not([tabindex]):focus,a:not([href]):not([tabindex]):hover{color:inherit;text-decoration:none}
 a:not([href]):not([tabindex]):focus{outline:0}
@@ -550,9 +550,9 @@ fieldset:disabled a.btn {
       box-shadow: 0 0 0 0.2rem rgba(255, 94, 94, 0.5)}
 
 .btn-light {
-  color: #212529;
-  background-color: #f8f9fa;
-  border-color: #f8f9fa}
+  color: var(--btntxt);
+  background-color:var(--bc2);
+  border-color: var(--border)}
   .btn-light:hover {
     color: #212529;
     background-color: #e2e6ea;
@@ -573,9 +573,9 @@ fieldset:disabled a.btn {
       box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5)}
 
 .btn-dark {
-  color: #fff;
-  background-color: #333333;
-  border-color: #333333}
+  color: var(--btntxt);
+  background-color:var(--primary);
+  border-color: var(--border)}
   .btn-dark:hover {
     color: #fff;
     background-color: #202020;
@@ -8009,7 +8009,7 @@ table.dataTable thead .sorting::after{content:"";cursor:pointer;font-family:f
     padding: 0}
   .tdl-holder li {
     background-color: transparent;
-    border-bottom: 1px solid #f3f3f3;
+    border-bottom: 1px solid var(--border);
     list-style: none none;
     margin: 0;
     padding: 0}
@@ -8070,11 +8070,11 @@ table.dataTable thead .sorting::after{content:"";cursor:pointer;font-family:f
       text-decoration: line-through;
       position: relative}
   .tdl-holder input[type=text] {
-    background-color: #fff;
+    background-color: var(--bc1);
     height: 40px;
     margin-top: 40px;
     border-radius: 0.625rem;
-    border-color: rgba(22, 35, 54, 0.5);
+    border-color:var(--border);
     color: #464a53}
 
 .faq-tab-panel .nav-pills .nav-link {

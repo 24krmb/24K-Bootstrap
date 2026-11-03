@@ -9440,12 +9440,6 @@ Input Style
       transition: all 0.2s ease-in-out;
       cursor: pointer}
 
-.wysihtml5-toolbar {
-  height: 50px}
-
-.textarea_editor {
-  min-height: 300px}
-
 .bootstrap-touchspin .input-group-btn,
 .bootstrap-touchspin .input-group-prepend,
 .bootstrap-touchspin .input-group-append,
@@ -12938,12 +12932,6 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
 
 [data-theme-version="dark"] .temp-top span {
   color: #abafb3}
-
-[data-theme-version="dark"] .compose-content .mce-panel {
-  background-color: #232323}
-
-[data-theme-version="dark"] .compose-content .dropzone {
-  background: #232323 !important}
 
 [data-theme-version="dark"] .profile-info {
   background: #232323 !important}

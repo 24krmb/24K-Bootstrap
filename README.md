@@ -49,7 +49,7 @@
 - **表单**：`form-basic.html`、`form-picker.html`、`form-step.html`、`form-validation.html`
 - **表格**：`table-basic.html`、`table-datatable.html`
 - **布局变体**：`layout-vertical.html`、`layout-horizontal.html`、`layout-dark.html`、`layout-light.html`、`layout-boxed.html`、`layout-compact-nav.html`、`layout-fixed-header.html`、`layout-fixed-sidebar.html`、`layout-wide.html`、`layout-one-column.html`、`layout-two-column.html`、`layout-blank.html`
-- **应用示例**：`app-calender.html`、`email-inbox.html`、`email-read.html`、`email-compose.html`
+- **应用示例**：`app-calender.html`、`email-inbox.html`
 - **实用组件**：`uc-nestedable.html`、`uc-noui-slider.html`、`uc-sweetalert.html`、`uc-toastr.html`
 - **认证页**：`page-login.html`、`page-register.html`
 - **错误页**：`page-error-403.html`

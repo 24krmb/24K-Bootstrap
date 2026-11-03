@@ -51,20 +51,16 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   --light: #f8f9fa;--dark: #333333;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;--breakpoint-md: 768px;--breakpoint-lg: 992px;--breakpoint-xl: 1200px;--breakpoint-xxl: 1400;
-  --font-family-sans-serif: "PingFang SC", "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-main: "PingFang SC", "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
-
 *,*::before,*::after {box-sizing: border-box}
 /* 全局隐藏滚动条 */
 html {scrollbar-width: none;-ms-overflow-style: none}html::-webkit-scrollbar {display: none}
-
 html {line-height: 1.15;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;-ms-overflow-style: scrollbar;-webkit-tap-highlight-color: rgba(0, 0, 0, 0)}
-
 @-ms-viewport {width: device-width}
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {display: block}
-
 body[data-theme-version="dark"] {/* 暗色覆盖 */
-  --primary:#F4D1B4;--24k-menu-hover-bg: #F4D1B4;--24k-item-hover-bg: rgba(244, 209, 180,.1);
+  --primary:#F4D1B4;--menu-hover-bg: #F4D1B4;--item-hover-bg: rgba(244, 209, 180,.1);
   --bc1: #181818;--bc2: #232323;--border:rgba(255,255,255,0.1);--box-shadow:none;
   --btntxt:#000;
   --24k-bg-sidebar: #232323;
@@ -75,15 +71,13 @@ body[data-theme-version="dark"] {/* 暗色覆盖 */
   --24k-menu-hover-text: #fff;
   --24k-menu-active-bg: #F4D1B4;
   --24k-menu-active-text: #fff}
-
 .nav-header .theme-toggle, .header .theme-toggle {position: absolute;right: 1.25rem;top: 0;height: 100%;display: flex;align-items: center;z-index: 99}
   .theme-toggle-btn {color: var(--24k-text-muted, #abafb3);font-size: 1.375rem;display: inline-block;padding: 0.25rem 0.5rem;line-height: 1}
     .theme-toggle-btn:hover, .theme-toggle-btn:focus {color: var(--primary);text-decoration: none}
   .header .theme-toggle-btn i {vertical-align: middle}
-
 body {/* 24K 主题变量（亮色默认） */
-  --primary:#7571f9;--24k-menu-hover-bg:#7571f9;--24k-menu-hover-text: var(--primary);
-  --24k-item-hover-bg: rgba(117, 113, 249,.1);
+  --primary:#7571f9;--menu-hover-bg:#7571f9;--24k-menu-hover-text: var(--primary);
+  --item-hover-bg: rgba(117, 113, 249,.1);
   --bc1: #F3F3F9;--bc2: #fff;--border:rgb(214,227,255);--box-shadow:#a99de7;
   --btntxt:#fff;
   --24k-bg-sidebar: #fff;
@@ -95,14 +89,10 @@ body {/* 24K 主题变量（亮色默认） */
   --24k-menu-active-text: #464a53;
   --24k-border: rgba(120, 130, 140, 0.13);
   margin: 0;
-  font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
-  font-size: 0.875rem;
-  font-weight: 400;
-  line-height: 1.5;
+  font-family:var(--font-family-main);font-size: 0.875rem;font-weight: 400;line-height: 1.5;
   color: var(--24k-text);
   text-align: left;
   background-color: var(--bc1)}
-
 [tabindex="-1"]:focus{outline:0!important}
 hr{box-sizing:content-box;height:0;overflow:visible}
 h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:.5rem}
@@ -5584,7 +5574,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
       .nk-sidebar .metismenu > li:hover span, .nk-sidebar .metismenu > li:focus span, .nk-sidebar .metismenu > li.active span {
         color: var(--btntxt)}
       .nk-sidebar .metismenu > li:hover > a {
-        background: var(--24k-menu-hover-bg);
+        background: var(--menu-hover-bg);
         color: var(--24k-menu-hover-text)}
       .nk-sidebar .metismenu > li.active > a {
         background: var(--primary);
@@ -5614,7 +5604,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
       transition: all 0.4s ease-in-out}
       .nk-sidebar .metismenu a:hover, .nk-sidebar .metismenu a:active, .nk-sidebar .metismenu a.active {
         text-decoration: none;color: var(--primary);
-        background-color: var(--24k-item-hover-bg)}
+        background-color: var(--item-hover-bg)}
     .nk-sidebar .metismenu .has-arrow:after {
       position: absolute;
       content: "";
@@ -10748,7 +10738,7 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
 [data-theme-version="dark"] .nk-sidebar .metismenu {
   background-color: var(--24k-bg-sidebar)}
   [data-theme-version="dark"] .nk-sidebar .metismenu > li:hover > a, [data-theme-version="dark"] .nk-sidebar .metismenu > li:focus > a {
-    background: var(--24k-menu-hover-bg);
+    background: var(--menu-hover-bg);
     color: var(--24k-menu-hover-text)}
 
   [data-theme-version="dark"] .nk-sidebar .metismenu a {

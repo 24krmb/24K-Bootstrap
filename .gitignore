@@ -24,6 +24,8 @@ Desktop.ini
 node_modules/
 /dist/
 
-# 未启用的主题方案草稿
+# 未启用的主题方案草稿（孤立文件，无页面引用）
 css/My css.css
+
+# 个人笔记
 问题.md

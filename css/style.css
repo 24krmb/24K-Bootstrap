@@ -1202,12 +1202,12 @@ pre {
   .table td {
     padding: 0.75rem;
     vertical-align: top;
-    border-top: 1px solid #dee2e6}
+    border-top: 1px solid var(--border)}
   .table thead th {
     vertical-align: bottom;
-    border-bottom: 2px solid #dee2e6}
+    border-bottom: 2px solid var(--border)}
   .table tbody + tbody {
-    border-top: 2px solid #dee2e6}
+    border-top: 2px solid var(--border)}
   .table .table {
     background-color: #F3F3F9}
 
@@ -1216,10 +1216,10 @@ pre {
   padding: 0.3rem}
 
 .table-bordered {
-  border: 1px solid #dee2e6}
+  border: 1px solid var(--border)}
   .table-bordered th,
   .table-bordered td {
-    border: 1px solid #dee2e6}
+    border: 1px solid var(--border)}
   .table-bordered thead th,
   .table-bordered thead td {
     border-bottom-width: 2px}
@@ -9716,9 +9716,7 @@ input[type="checkbox"]:checked:after {
   line-height: 1.2;
   vertical-align: middle}
 
-.table td,
-.table th {
-  border-color: #f3f3f3}
+.table td,.table th {border-color: var(--border)}
 
 .table thead th {
   border-bottom: none;

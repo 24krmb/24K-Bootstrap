@@ -41,13 +41,14 @@
 ├── layout/                 # 布局变体页面
 ├── ui/                     # UI 组件与实用组件页面
 ├── form/                   # 表单页面
+├── chart/                  # 图表页面
 └── images/                 # Logo、头像等静态图片
 ```
 
 ## 页面清单
 
 - **仪表盘**：`index.html`、`widgets.html`
-- **图表**：`chart-chartjs.html`、`chart-flot.html`、`chart-morris.html`、`chart-peity.html`、`chart-sparkline.html`、`chart-chartist.html`
+- **图表**（`chart/` 目录）：`chart-chartjs.html`、`chart-flot.html`、`chart-morris.html`、`chart-peity.html`、`chart-sparkline.html`、`chart-chartist.html`
 - **UI 组件**（`ui/` 目录）：`ui-accordion.html`、`ui-alert.html`、`ui-badge.html`、`ui-button.html`、`ui-button-group.html`、`ui-cards.html`、`ui-carousel.html`、`ui-dropdown.html`、`ui-list-group.html`、`ui-media-object.html`、`ui-modal.html`、`ui-pagination.html`、`ui-popover.html`、`ui-progressbar.html`、`ui-tab.html`、`ui-typography.html`
 - **表单**（`form/` 目录）：`form-basic.html`、`form-picker.html`、`form-step.html`、`form-validation.html`
 - **表格**：`table-basic.html`、`table-datatable.html`

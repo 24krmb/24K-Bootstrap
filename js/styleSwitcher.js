@@ -22,7 +22,7 @@
     }
 
     function setMode(mode) {
-        try { localStorage.setItem("quixlab-theme-mode", mode); } catch (e) {}
+        try { localStorage.setItem("24krmb-theme-mode", mode); } catch (e) {}
         applyMode(mode);
     }
 

@@ -5,21 +5,21 @@
 
 ## 项目简介
 
-一套功能齐全的仪表盘 / 后台 UI 模板，提供 60+ 个预制页面，覆盖仪表盘、图表、表单、表格、UI 组件、布局变体、邮件系统、错误页等常见后台场景。所有页面均为独立 HTML 文件，通过本地引用 `plugins/` 下的静态资源运行，适合作为管理系统的前端起点或原型演示。
+一套功能齐全的仪表盘 / 后台 UI 模板，提供 50+ 个预制页面，覆盖仪表盘、图表、表单、表格、UI 组件、布局变体、邮件系统、错误页等常见后台场景。所有页面均为独立 HTML 文件，通过本地引用 `plugins/` 下的静态资源运行，适合作为管理系统的前端起点或原型演示。
 
 ## 技术栈
 
-| 类别 | 技术 / 版本 |
-| --- | --- |
-| UI 框架 | Bootstrap 4.1.3 |
-| JS 库 | jQuery 3.3.1 |
-| 样式 | SCSS（编译产物 `css/style.css` + source map） |
-| 字体 | Google Fonts — Noto Sans SC（400/500/700） |
-| 图表 | Chart.js、Chartist、Morris、Flot、ECharts、Highcharts、C3、Rickshaw、Sparkline、Peity 等 |
-| 图标 | Font Awesome、Material Design Icons、Themify、Ionicons、Simple Line Icons、Weather Icons、Flag Icons、CryptoCoins 等 10 套 |
-| 富文本编辑器 | CKEditor、TinyMCE、Summernote、Quill、wysihtml5 |
-| 数据表格 | DataTables、FooTable、jsGrid、jQuery Bootgrid |
-| 其他常用插件 | FullCalendar、SweetAlert(2)、Toastr、Select2、DataMaps、Moment.js、NouiSlider、Dropify、Cropper.js 等 120+ 插件 |
+| 类别     | 技术 / 版本                                                                                                           |
+| ------ | ----------------------------------------------------------------------------------------------------------------- |
+| UI 框架  | Bootstrap 4.1.3                                                                                                   |
+| JS 库   | jQuery 3.3.1                                                                                                      |
+| 样式     | SCSS（编译产物 `css/style.css` + source map）                                                                           |
+| 字体     | Google Fonts — Noto Sans SC（400/500/700）                                                                          |
+| 图表     | Chart.js、Chartist、Morris、Flot、ECharts、Highcharts、C3、Rickshaw、Sparkline、Peity 等                                    |
+| 图标     | Font Awesome、Material Design Icons、Themify、Ionicons、Simple Line Icons、Weather Icons、Flag Icons、CryptoCoins 等 10 套 |
+| 富文本编辑器 | CKEditor、TinyMCE、Summernote、Quill、wysihtml5                                                                       |
+| 数据表格   | DataTables、FooTable、jsGrid、jQuery Bootgrid                                                                        |
+| 其他常用插件 | FullCalendar、SweetAlert(2)、Toastr、Select2、DataMaps、Moment.js、NouiSlider、Dropify、Cropper.js 等 120+ 插件              |
 
 ## 目录结构
 
@@ -50,10 +50,10 @@
 - **表单**：`form-basic.html`、`form-editor.html`、`form-picker.html`、`form-step.html`、`form-validation.html`
 - **表格**：`table-basic.html`、`table-datatable.html`
 - **布局变体**：`layout-vertical.html`、`layout-horizontal.html`、`layout-dark.html`、`layout-light.html`、`layout-boxed.html`、`layout-compact-nav.html`、`layout-fixed-header.html`、`layout-fixed-sidebar.html`、`layout-wide.html`、`layout-one-column.html`、`layout-two-column.html`、`layout-blank.html`
-- **应用示例**：`app-calender.html`、`app-profile.html`、`email-inbox.html`、`email-read.html`、`email-compose.html`
+- **应用示例**：`app-calender.html`、`email-inbox.html`、`email-read.html`、`email-compose.html`
 - **实用组件**：`uc-nestedable.html`、`uc-noui-slider.html`、`uc-sweetalert.html`、`uc-toastr.html`
 - **认证页**：`page-login.html`、`page-register.html`、`page-lock.html`
-- **错误页**：`page-error-400 / 403 / 404 / 500 / 503.html`
+- **错误页**：`page-error-403.html`
 - **其他**：`blank.html`（空白起步页）
 
 ## 快速开始

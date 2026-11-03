@@ -1,0 +1,29 @@
+# 系统文件
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# 编辑器 / IDE
+.vscode/
+.idea/
+.trae/
+*.swp
+*.swo
+
+# 日志与临时文件
+*.log
+*.tmp
+*.bak
+*~
+
+# 环境变量 / 密钥
+.env
+.env.*
+
+# 依赖与构建产物（预留；仅限仓库根目录，避免误伤 plugins/*/dist/）
+node_modules/
+/dist/
+
+# 未启用的主题方案草稿
+css/My css.css
+问题.md

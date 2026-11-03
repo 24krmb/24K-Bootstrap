@@ -5,7 +5,7 @@
         layout: "vertical", //两种选项："vertical"（垂直）和 "horizontal"（水平）
         navheaderBg: "color_1", //共 10 种选项："color_1" 到 "color_10"
         headerBg: "color_1", //共 10 种选项："color_1" 到 "color_10"
-        sidebarStyle: "vertical", //定义侧边栏的外观样式，可选："full"（完整）、"compact"（紧凑）、"mini"（迷你）和 "overlay"（覆盖）。若 layout 为 "horizontal"，sidebarStyle 不再接受 "overlay"，会自动变为 "full"！
+        sidebarStyle: "full", //定义侧边栏的外观样式，可选："full"（完整）、"compact"（紧凑）、"mini"（迷你）和 "overlay"（覆盖）。若 layout 为 "horizontal"，sidebarStyle 不再接受 "overlay"，会自动变为 "full"！
         sidebarBg: "color_1", //共 10 种选项："color_1" 到 "color_10"
         sidebarPosition: "fixed", //两种选项："static"（静态）和 "fixed"（固定）
         headerPosition: "static", //两种选项："static"（静态）和 "fixed"（固定）

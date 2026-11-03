@@ -89,7 +89,7 @@ body[data-theme-version="dark"] {/* 暗色覆盖 */
 
 .nav-header .theme-toggle, .header .theme-toggle {position: absolute;right: 1.25rem;top: 0;height: 100%;display: flex;align-items: center;z-index: 99}
   .theme-toggle-btn {color: var(--24k-text-muted, #abafb3);font-size: 1.375rem;display: inline-block;padding: 0.25rem 0.5rem;line-height: 1}
-    .theme-toggle-btn:hover, .theme-toggle-btn:focus {color: var(--24k-brand);text-decoration: none}
+    .theme-toggle-btn:hover, .theme-toggle-btn:focus {color: var(--primary);text-decoration: none}
   .header .theme-toggle-btn i {vertical-align: middle}
 
 body {/* 24K 主题变量（亮色默认） */
@@ -104,7 +104,6 @@ body {/* 24K 主题变量（亮色默认） */
   --24k-menu-hover-text: #7571f9;
   --24k-menu-active-bg: #F3F1FA;
   --24k-menu-active-text: #464a53;
-  --24k-brand: #7571f9;
   --24k-border: rgba(120, 130, 140, 0.13);
   margin: 0;
   font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
@@ -6922,9 +6921,6 @@ a.text-dark:hover, a.text-dark:focus {
 .icon-razzmatazz i {
   color: #f31e7a}
 
-.circle-rounded {
-  border-radius: 50% !important}
-
 .icon-muted i {
   color: #8898aa !important}
 
@@ -8962,21 +8958,6 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
       display: none}
 }
 
-.card-profile i, .card-profile span {
-  font-size: 30px}
-
-.card-profile h3 {
-  font-size: 1.2rem}
-
-.card-profile__info li strong {
-  max-width: 100px}
-
-.form-profile__icons button {
-  background: none}
-
-.form-profile__icons li i, .form-profile__icons li span {
-  color: #AEB3C5}
-
 .social-icons .facebook {
   background: #3b5998}
   .social-icons .facebook i, .social-icons .facebook span {
@@ -8996,20 +8977,6 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   background: #db4439}
   .social-icons .googlePlus i, .social-icons .googlePlus span {
     color: #fff}
-
-.media-reply {
-  margin-bottom: 20px}
-  .media-reply .media-body {
-    padding: 20px;
-    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1)}
-    .media-reply .media-body .media-body {
-      box-shadow: none}
-  .media-reply__link button {
-    background: none}
-  .media-reply__link i, .media-reply__link span {
-    color: #AFB4C5}
-    .media-reply__link i:hover, .media-reply__link span:hover {
-      color: #FF4D87}
 
 .login-form__title {
   color: #515E75;

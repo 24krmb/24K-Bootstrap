@@ -31,7 +31,7 @@ quixSettings.prototype.manageVersion = function() {
     // 主题三态：light（亮色）/ dark（暗色）/ auto（跟随系统，默认）
     // 用户选择持久化在 localStorage，优先级高于 gleek.js 配置
     var stored = null;
-    try { stored = localStorage.getItem("quixlab-theme-mode"); } catch (e) {}
+    try { stored = localStorage.getItem("24krmb-theme-mode"); } catch (e) {}
     var mode = stored || this.version || "auto";
     if (["light", "dark", "auto"].indexOf(mode) === -1) { mode = "auto"; }
     body.attr("data-theme-mode", mode);

@@ -37,31 +37,20 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 .gradient-anchor {-webkit-background-clip: text !important;background-clip: text !important;-webkit-text-fill-color: transparent !important}
 
 :root {
-  --red: #f36;--danger: #f36;
-  --green: #0c9;--success: #6fd96f;
-  --blue: #324cdd;
+  --red: #f36;--danger: #f36;--green: #0c9;--success: #0c9;
+  --blue: #66F;--primary: #66F;--info: #66F;
+  --orange: #fc3;--yellow: #fc3;--warning: #fc3;
   --indigo: #6610f2;
   --purple: #6f42c1;
   --pink: #e83e8c;
-  --orange: #fd7e14;
-  --yellow: #fa3a0e;
   --teal: #00A9A2;
   --cyan: #11cdef;
   --white: #fff;
-  --gray: #f7fafc;
-  --gray-dark: #333333;
-  --primary: #7571f9;
+  --gray: #f7fafc;--gray-dark: #333333;
   --secondary: #9097c4;
-  --info: #4d7cff;
-  --warning: #f29d56;
-  --light: #f8f9fa;
-  --dark: #333333;
+  --light: #f8f9fa;--dark: #333333;
   --breakpoint-xs: 0;
-  --breakpoint-sm: 576px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
-  --breakpoint-xxl: 1400;
+  --breakpoint-sm: 576px;--breakpoint-md: 768px;--breakpoint-lg: 992px;--breakpoint-xl: 1200px;--breakpoint-xxl: 1400;
   --font-family-sans-serif: "PingFang SC", "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
 

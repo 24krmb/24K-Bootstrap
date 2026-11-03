@@ -80,6 +80,19 @@ npx serve .
 4. **新增页面**：复制 `blank.html` 作为起点，按需引入所需插件的 CSS/JS 即可。
 5. **删减体积**：`plugins/` 目录为全量打包（120+ 插件），实际只用到其中一部分，可按页面引用关系删除未使用的插件目录以减小体积。
 
+## 提交信息规范
+
+1.使用约定式提交（Conventional Commits）：
+
+feat: 新功能，fix: 修复 bug，docs: 文档更新，refactor: 重构，test: 测试相关，chore: 构建过程或辅助工具变动，build: 打包构建相关修改，ci: 持续集成相关修改，style: 代码格式调整
+
+2.提交信息格式：
+```
+<type>: <subject>
+```
+- type：提交类型，例如：feat、fix、docs、style、refactor、perf、test、build、ci、chore
+- subject：提交主题，简洁明了地描述本次提交的内容
+
 ## 许可
 
 - 所含第三方插件版权归各自作者所有，使用前请查阅对应插件目录内的 LICENSE 文件。

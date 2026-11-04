@@ -37,14 +37,10 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 .gradient-anchor {-webkit-background-clip: text !important;background-clip: text !important;-webkit-text-fill-color: transparent !important}
 
 :root {
-  --red: #f36;--danger: #f36;--green: #0c9;--success: #0c9;
-  --blue: #66F;--primary: #66F;--info: #66F;
-  --orange: #fc3;--yellow: #fc3;--warning: #fc3;
-  --indigo: #6610f2;
-  --purple: #6f42c1;
-  --pink: #e83e8c;
-  --teal: #00A9A2;
-  --cyan: #11cdef;
+  --red: #f36;--rb:rgba(255,51,102,.1);--rd:rgba(255,51,102,.2);
+  --green: #0c9;--gb:rgba(0,204,153,.1);--gd:rgba(0,204,153,.2);
+  --blue: #66F;--bb:rgba(102,102,255,.1);--bd:rgba(102,102,255,.2);
+  --yellow: #fc3;--yb:rgba(255,204,51,.1);--yd:rgba(255,204,51,.2);
   --white: #fff;
   --gray: #f7fafc;--gray-dark: #333333;
   --secondary: #9097c4;
@@ -60,12 +56,11 @@ html {line-height: 1.15;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100
 @-ms-viewport {width: device-width}
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {display: block}
 body[data-theme-version="dark"] {/* 暗色覆盖 */
-  --primary:#F4D1B4;--menu-hover-bg: #F4D1B4;--item-hover-bg: rgba(244, 209, 180,.1);
+  --primary:#F4D1B4;--menu-hover-bg:rgba(244, 209, 180,.1);--item-hover-bg: rgba(244, 209, 180,.1);
   --bc1: #181818;--bc2: #232323;--border:rgba(255,255,255,0.1);--box-shadow:none;
   --fc1:#b4b8bf;--fc2:#33517E;--btntxt:#000;
   --24k-bg-sidebar: #232323;
   --24k-bg-sidebar-sub: #232323;
-  --24k-text: #abafb3;
   --24k-menu-link: #ddd;
   --24k-menu-link-strong: #abafb3;
   --24k-menu-hover-text: #fff;
@@ -76,13 +71,12 @@ body[data-theme-version="dark"] {/* 暗色覆盖 */
     .theme-toggle-btn:hover, .theme-toggle-btn:focus {color: var(--primary);text-decoration: none}
   .header .theme-toggle-btn i {vertical-align: middle}
 body {/* 24K 主题变量（亮色默认） */
-  --primary:#7571f9;--menu-hover-bg:#7571f9;--24k-menu-hover-text: var(--primary);
+  --primary:#C0D2FF;--menu-hover-bg:rgba(117, 113, 249,.1);--24k-menu-hover-text: var(--primary);
   --item-hover-bg: rgba(117, 113, 249,.1);
-  --bc1: #F3F3F9;--bc2: #fff;--border:rgb(214,227,255);--box-shadow:#a99de7;
+  --bc1: #F3F3F9;--bc2: #fff;--border:rgb(214,227,255);--box-shadow:rgba(102, 102, 255,.1);
   --fc1:#183153;--fc2:#73757a;--btntxt:#fff;
   --24k-bg-sidebar: #fff;
   --24k-bg-sidebar-sub: #fafafa;
-  --24k-text: #76838f;
   --24k-menu-link: #464a53;
   --24k-menu-link-strong: #464a53;
   --24k-menu-active-bg: #F3F1FA;
@@ -90,7 +84,7 @@ body {/* 24K 主题变量（亮色默认） */
   --24k-border: rgba(120, 130, 140, 0.13);
   margin: 0;
   font-family:var(--font-family-main);font-size: 0.875rem;font-weight: 400;line-height: 1.5;
-  color: var(--24k-text);
+  color: var(--fc2);
   text-align: left;
   background-color: var(--bc1)}
 [tabindex="-1"]:focus{outline:0!important}
@@ -2069,13 +2063,13 @@ input[type="button"].btn-block {
 .badge-primary[href]:focus,.badge-primary[href]:hover{color:#fff;text-decoration:none;background-color:#4540f7}
 .badge-secondary{color:var(--btntxt);background-color:var(--secondary)}
 .badge-secondary[href]:focus,.badge-secondary[href]:hover{color:#212529;text-decoration:none;background-color:#6f78b2}
-.badge-success{color:var(--btntxt);background-color:var(--success)}
+.badge-success{color:var(--btntxt);background-color:var(--green)}
 .badge-success[href]:focus,.badge-success[href]:hover{color:#212529;text-decoration:none;background-color:#47ce47}
-.badge-info{color:var(--btntxt);background-color:var(--info)}
+.badge-info{color:var(--btntxt);background-color:var(--green)}
 .badge-info[href]:focus,.badge-info[href]:hover{color:#fff;text-decoration:none;background-color:#1a56ff}
-.badge-warning{color:var(--btntxt);background-color:var(--warning)}
+.badge-warning{color:var(--btntxt);background-color:var(--yellow)}
 .badge-warning[href]:focus,.badge-warning[href]:hover{color:#212529;text-decoration:none;background-color:#ee8227}
-.badge-danger{color:var(--btntxt);background-color:var(--danger)}
+.badge-danger{color:var(--btntxt);background-color:var(--red)}
 .badge-danger[href]:focus,.badge-danger[href]:hover{color:#fff;text-decoration:none;background-color:#ff2b2b}
 .badge-light{color:#212529;background-color:var(--light)}
 .badge-light[href]:focus,.badge-light[href]:hover{color:#212529;text-decoration:none;background-color:#dae0e5}
@@ -2096,16 +2090,16 @@ input[type="button"].btn-block {
 .alert-secondary{color:var(--btntxt);background-color:var(--secondary);border-color:#e0e2ee}
 .alert-secondary hr{border-top-color:#d0d3e5}
 .alert-secondary .alert-link{color:#353849}
-.alert-success{color:var(--btntxt);background-color:var(--success);border-color:#d7f4d7}
+.alert-success{color:var(--btntxt);background-color:var(--green);border-color:#d7f4d7}
 .alert-success hr{border-top-color:#c3efc3}
 .alert-success .alert-link{color:#294f29}
-.alert-info{color:var(--btntxt);background-color:var(--info);border-color:#cddaff}
+.alert-info{color:var(--btntxt);background-color:var(--green);border-color:#cddaff}
 .alert-info hr{border-top-color:#b4c7ff}
 .alert-info .alert-link{color:#1c2d5e}
-.alert-warning{color:var(--btntxt);background-color:var(--warning);border-color:#fbe4d0}
+.alert-warning{color:var(--btntxt);background-color:var(--yellow);border-color:#fbe4d0}
 .alert-warning hr{border-top-color:#f9d7b9}
 .alert-warning .alert-link{color:#583a20}
-.alert-danger{color:var(--btntxt);background-color:var(--danger);border-color:#ffd2d2}
+.alert-danger{color:var(--btntxt);background-color:var(--red);border-color:#ffd2d2}
 .alert-danger hr{border-top-color:#ffb9b9}
 .alert-danger .alert-link{color:#602323}
 .alert-light{color:#818182;background-color:var(--light);border-color:#fdfdfe}
@@ -4183,7 +4177,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     padding: 0;
     margin: 0;
     list-style: none;
-    background: var(--24k-bg-sidebar-sub)}
+    background: var(--bc2)}
   .nk-sidebar .metismenu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4206,9 +4200,9 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
       .nk-sidebar .metismenu > li > a {
         transition: none}
       .nk-sidebar .metismenu > li:hover i, .nk-sidebar .metismenu > li:focus i, .nk-sidebar .metismenu > li.active i {
-        color: var(--btntxt) !important}
+        color: var(--fc1)}
       .nk-sidebar .metismenu > li:hover span, .nk-sidebar .metismenu > li:focus span, .nk-sidebar .metismenu > li.active span {
-        color: var(--btntxt)}
+        color: var(--fc1)}
       .nk-sidebar .metismenu > li:hover > a {
         background: var(--menu-hover-bg);
         color: var(--24k-menu-hover-text)}
@@ -4228,7 +4222,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
       padding: 0.8125rem 1.25rem;
       outline-width: 0;
       transition: all .3s ease-out;
-      color: var(--24k-menu-link);
+      color: var(--fc1);
       font-weight: 500}
     .nk-sidebar .metismenu ul a {
       padding: 0.625rem 0.9375rem 0.625rem 2.8125rem}
@@ -4318,8 +4312,6 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     [data-sidebar-style="full"][data-layout="vertical"] .menu-toggle .nav-header .brand-logo a {
       padding: 1.607rem 1.0625rem;
       text-align: center}
-      [data-sidebar-style="full"][data-layout="vertical"] .menu-toggle .nav-header .brand-logo a b img {
-        margin-top: 0.4375rem}
   [data-sidebar-style="full"][data-layout="vertical"] .menu-toggle .nav-header .nav-control .hamburger .line {
     background-color: #464a53 !important}
 

@@ -9,12 +9,12 @@
 
 ## 技术栈
 
-| 类别     | 技术 / 版本                                                                                                           |
-| ------ | ----------------------------------------------------------------------------------------------------------------- |
-| UI 框架  | Bootstrap 4.1.3                                                                                                   |
-| JS 库   | jQuery 3.3.1                                                                                                      |
-| 样式     | SCSS（编译产物 `css/style.css` + source map）                                                                           |
-| 字体     | Google Fonts — Noto Sans SC（400/500/700）                                                                          |
+| 类别     | 技术 / 版本      |
+| ------ | ------ |
+| UI 框架  | Bootstrap 4.1.3 |
+| JS 库   | jQuery 3.3.1     |
+| 样式     | SCSS（编译产物 `css/style.css` + source map）  |
+| 字体     | Google Fonts — Noto Sans SC（400/500/700）    |
 | 图表     | Chart.js、Chartist、Morris、Flot、ECharts、Highcharts、C3、Rickshaw、Sparkline、Peity 等                                    |
 | 图标     | Font Awesome、Material Design Icons、Themify、Ionicons、Simple Line Icons、Weather Icons、Flag Icons、CryptoCoins 等 10 套 |
 | 数据表格   | DataTables、FooTable、jsGrid、jQuery Bootgrid                                                                        |
@@ -25,7 +25,6 @@
 ```
 24K-Bootstrap/
 ├── index.html              # 主仪表盘（默认入口）
-├── *.html                  # 60+ 个演示页面（见下方页面清单）
 ├── css/
 │   ├── style.css           # 模板主样式（编译产物）
 │   └── style.css.map       # Source Map
@@ -43,22 +42,8 @@
 ├── form/                   # 表单页面
 ├── chart/                  # 图表页面
 ├── table/                  # 表格页面
-└── images/                 # Logo、头像等静态图片
+└── images/                 # 静态图片
 ```
-
-## 页面清单
-
-- **仪表盘**：`index.html`、`widgets.html`
-- **图表**（`chart/` 目录）：`chart-chartjs.html`、`chart-flot.html`、`chart-morris.html`、`chart-peity.html`、`chart-sparkline.html`、`chart-chartist.html`
-- **UI 组件**（`ui/` 目录）：`ui-accordion.html`、`ui-alert.html`、`ui-badge.html`、`ui-button.html`、`ui-button-group.html`、`ui-cards.html`、`ui-carousel.html`、`ui-dropdown.html`、`ui-list-group.html`、`ui-media-object.html`、`ui-modal.html`、`ui-pagination.html`、`ui-popover.html`、`ui-progressbar.html`、`ui-tab.html`、`ui-typography.html`
-- **表单**（`form/` 目录）：`form-basic.html`、`form-picker.html`、`form-step.html`、`form-validation.html`
-- **表格**（`table/` 目录）：`table-basic.html`、`table-datatable.html`
-- **布局变体**（`layout/` 目录）：`layout-vertical.html`、`layout-horizontal.html`、`layout-dark.html`、`layout-light.html`、`layout-boxed.html`、`layout-compact-nav.html`、`layout-fixed-header.html`、`layout-fixed-sidebar.html`、`layout-wide.html`、`layout-one-column.html`、`layout-two-column.html`、`layout-blank.html`
-- **应用示例**：`app-calender.html`、`email-inbox.html`
-- **实用组件**（`ui/` 目录）：`uc-nestedable.html`、`uc-noui-slider.html`、`uc-sweetalert.html`、`uc-toastr.html`
-- **认证页**：`page-login.html`、`page-register.html`
-- **错误页**：`page-error-403.html`
-- **其他**：`blank.html`（空白起步页）
 
 ## 快速开始
 

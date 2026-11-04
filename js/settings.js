@@ -1,13 +1,10 @@
 const body = $('body');
 const html = $('html');
 
-function quixSettings({version, layout, navheaderBg, headerBg, sidebarStyle, sidebarBg, sidebarPosition, headerPosition, containerLayout, direction}) {
+function quixSettings({version, layout, sidebarStyle, sidebarPosition, headerPosition, containerLayout, direction}) {
     this.version = version || "light";
     this.layout = layout || "vertical";
-    this.navheaderBg = navheaderBg || "color_1";
-    this.headerBg = headerBg || "color_1";
     this.sidebarStyle = sidebarStyle || "full";
-    this.sidebarBg = sidebarBg || "color_1";
     this.sidebarPosition = sidebarPosition || "static";
     this.headerPosition = headerPosition || "static";
     this.containerLayout = containerLayout || "wide";
@@ -15,10 +12,7 @@ function quixSettings({version, layout, navheaderBg, headerBg, sidebarStyle, sid
 
     this.manageVersion();
     this.manageLayout();
-    this.manageNavHeaderBg();
-    this.manageHeaderBg();
     this.manageSidebarStyle();
-    this.manageSidebarBg();
     this.manageSidebarPosition();
     this.manageHeaderPosition();
     this.manageContainerLayout();
@@ -60,80 +54,6 @@ quixSettings.prototype.manageLayout = function() {
     }
 }
 
-quixSettings.prototype.manageNavHeaderBg = function() {
-    switch(this.navheaderBg) {
-        case "color_1": 
-            body.attr("data-nav-headerbg", "color_1");
-            break;
-        case "color_2": 
-            body.attr("data-nav-headerbg", "color_2");
-            break;
-        case "color_3": 
-            body.attr("data-nav-headerbg", "color_3");
-            break;
-        case "color_4": 
-            body.attr("data-nav-headerbg", "color_4");
-            break;
-        case "color_5": 
-            body.attr("data-nav-headerbg", "color_5");
-            break;
-        case "color_6": 
-            body.attr("data-nav-headerbg", "color_6");
-            break;
-        case "color_7": 
-            body.attr("data-nav-headerbg", "color_7");
-            break;
-        case "color_8": 
-            body.attr("data-nav-headerbg", "color_8");
-            break;
-        case "color_9": 
-            body.attr("data-nav-headerbg", "color_9");
-            break;
-        case "color_10": 
-            body.attr("data-nav-headerbg", "color_10");
-            break;
-        default:
-            body.attr("data-nav-headerbg", "color_1");
-    }
-}
-
-quixSettings.prototype.manageHeaderBg = function() {
-    switch(this.headerBg) {
-        case "color_1": 
-            body.attr("data-headerbg", "color_1");
-            break;
-        case "color_2": 
-            body.attr("data-headerbg", "color_2");
-            break;
-        case "color_3": 
-            body.attr("data-headerbg", "color_3");
-            break;
-        case "color_4": 
-            body.attr("data-headerbg", "color_4");
-            break;
-        case "color_5": 
-            body.attr("data-headerbg", "color_5");
-            break;
-        case "color_6": 
-            body.attr("data-headerbg", "color_6");
-            break;
-        case "color_7": 
-            body.attr("data-headerbg", "color_7");
-            break;
-        case "color_8": 
-            body.attr("data-headerbg", "color_8");
-            break;
-        case "color_9": 
-            body.attr("data-headerbg", "color_9");
-            break;
-        case "color_10": 
-            body.attr("data-headerbg", "color_10");
-            break;
-        default:
-            body.attr("data-headerbg", "color_1");
-    }
-}
-
 quixSettings.prototype.manageSidebarStyle = function() {
     switch(this.sidebarStyle) {
         case "full":
@@ -150,43 +70,6 @@ quixSettings.prototype.manageSidebarStyle = function() {
             break;
         default:
             body.attr("data-sidebar-style", "full");
-    }
-}
-
-quixSettings.prototype.manageSidebarBg = function() {
-    switch(this.sidebarBg) {
-        case "color_1": 
-            body.attr("data-sibebarbg", "color_1");
-            break;
-        case "color_2": 
-            body.attr("data-sibebarbg", "color_2");
-            break;
-        case "color_3": 
-            body.attr("data-sibebarbg", "color_3");
-            break;
-        case "color_4": 
-            body.attr("data-sibebarbg", "color_4");
-            break;
-        case "color_5": 
-            body.attr("data-sibebarbg", "color_5");
-            break;
-        case "color_6": 
-            body.attr("data-sibebarbg", "color_6");
-            break;
-        case "color_7": 
-            body.attr("data-sibebarbg", "color_7");
-            break;
-        case "color_8": 
-            body.attr("data-sibebarbg", "color_8");
-            break;
-        case "color_9": 
-            body.attr("data-sibebarbg", "color_9");
-            break;
-        case "color_10": 
-            body.attr("data-sibebarbg", "color_10");
-            break;
-        default:
-            body.attr("data-sibebarbg", "color_1");
     }
 }
 

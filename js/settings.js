@@ -21,6 +21,8 @@ function quixSettings({version, layout, sidebarStyle, sidebarPosition, headerPos
 
 }
 
+var mqListenerBound = false;
+
 quixSettings.prototype.manageVersion = function() {
     // 主题三态：light（亮色）/ dark（暗色）/ auto（跟随系统，默认）
     // 用户选择持久化在 localStorage，优先级高于 gleek.js 配置
@@ -35,8 +37,12 @@ quixSettings.prototype.manageVersion = function() {
         if ((body.attr("data-theme-mode") || "auto") !== "auto") { return; }
         body.attr("data-theme-version", mq.matches ? "dark" : "light");
     };
-    if (mq.addEventListener) { mq.addEventListener("change", apply); }
-    else if (mq.addListener) { mq.addListener(apply); }
+    // 页面可能重复实例化 quixSettings（如 layout 页自带配置），监听只绑一次
+    if (!mqListenerBound) {
+        if (mq.addEventListener) { mq.addEventListener("change", apply); }
+        else if (mq.addListener) { mq.addListener(apply); }
+        mqListenerBound = true;
+    }
     body.attr("data-theme-version", (mode === "auto") ? (mq.matches ? "dark" : "light") : mode);
 }
 
@@ -147,6 +153,25 @@ quixSettings.prototype.manageResponsiveSidebar = function() {
     if(innerWidth < 768) {
         body.attr("data-sidebar-style", "overlay");
     }
+
+    // 视口跨过断点时重放完整属性链（防抖 250ms）。
+    // 仅重跑 manageResponsiveSidebar 无法恢复大屏属性（它只处理窄屏分支），
+    // 故对最后一次实例的配置重放 layout/sidebar/container 等 manage*（主题 version/rtl 与视口无关，跳过）。
+    // 命名空间绑定：重复实例化时自动覆盖旧监听，始终只挂一个。
+    quixSettings._last = this;
+    $(window).off("resize.quixResponsive").on("resize.quixResponsive", function() {
+        clearTimeout(quixSettings._rzTimer);
+        quixSettings._rzTimer = setTimeout(function() {
+            var s = quixSettings._last;
+            if (!s) { return; }
+            s.manageLayout();
+            s.manageSidebarStyle();
+            s.manageSidebarPosition();
+            s.manageHeaderPosition();
+            s.manageContainerLayout();
+            s.manageResponsiveSidebar();
+        }, 250);
+    });
 }
 
 // 占位链接统一为 href="#" 后，阻止默认行为（URL 追加 # 并滚动到页顶）。

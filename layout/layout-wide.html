@@ -243,9 +243,9 @@
         "use strict"
 
             new quixSettings({
-                version: "light", //2 options "light" and "dark"
+                version: "auto", //三种选项 "light" / "dark" / "auto"（跟随系统，默认）
                 layout: "vertical", //2 options, "vertical" and "horizontal"
-                sidebarStyle: "vertical", //defines how sidebar should look like, options are: "full", "compact", "mini" and "overlay". If layout is "horizontal", sidebarStyle won't take "overlay" argument anymore, this will turn into "full" automatically!
+                sidebarStyle: "full", //defines how sidebar should look like, options are: "full", "compact", "mini" and "overlay". If layout is "horizontal", sidebarStyle won't take "overlay" argument anymore, this will turn into "full" automatically!
                 sidebarPosition: "static", //have two options, "static" and "fixed"
                 headerPosition: "static", //have two options, "static" and "fixed"
                 containerLayout: "wide",  //"boxed" and  "wide". If layout "vertical" and containerLayout "boxed", sidebarStyle will automatically turn into "overlay".

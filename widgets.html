@@ -535,62 +535,63 @@
 
 
     <script>
-        window.localStorage.clear();
-        $(document).ready(function () {
+        // 待办事项（与 index.html 行为一致：添加/删除/勾选 + localStorage 持久化）
+        // 数据以 JSON 纯文本存储，读取经 .text() 重建，防存储型 XSS
+        $(function() {
+            var KEY = "24krmb-todo-widgets";
 
-$('#list-items').html(localStorage.getItem('listItems'));
+            function buildItem(text, done) {
+                var li = $("<li><label><input type='checkbox'><i></i><span></span><a href='#' class='ti-close'></a></label></li>");
+                li.find("span").text(text);
+                li.find("input").prop("checked", !!done);
+                return li;
+            }
 
-$('.add-items').submit(function(event) 
-{
-event.preventDefault();
+            function save() {
+                var items = [];
+                $(".tdl-content2 li").each(function() {
+                    items.push({
+                        text: $(this).find("span").text(),
+                        done: $(this).find("input").prop("checked")
+                    });
+                });
+                try { localStorage.setItem(KEY, JSON.stringify(items)); } catch (e) {}
+            }
 
-var item = $('#todo-list-item').val();
-if(item) 
-{
-$('#list-items').append("<li><div class='round d-inline-block'><input type='checkbox' id='checkbox' /><label for='checkbox'></label></div><label for='checkbox'>" + item + "</label><a class='remove'><i class='fa fa-trash'></i></a></li>");
+            var stored = null;
+            try { stored = JSON.parse(localStorage.getItem(KEY)); } catch (e) {}
+            if (stored && stored.length) {
+                var $ul = $(".tdl-content2 ul").empty();
+                $.each(stored, function(idx, item) {
+                    $ul.append(buildItem(item.text, item.done));
+                });
+            } else {
+                save(); // 首次访问：以页面静态演示项为初始数据
+            }
 
+            $(".tdl-new2").on("keypress", function(e) {
+                if ((e.keyCode ? e.keyCode : e.which) == 13) {
+                    var v = $(this).val();
+                    if (v.replace(/ +?/g, '') !== "") {
+                        $(".tdl-content2 ul").append(buildItem(v, false));
+                        save();
+                        $(this).val("");
+                    }
+                    return false;
+                }
+            });
 
+            $(".tdl-content2").on("click", "a", function() {
+                var li = $(this).parent().parent("li");
+                li.addClass("remove").stop().delay(100).slideUp("fast", function() {
+                    li.remove();
+                    save();
+                });
+                return false;
+            });
 
-
-// <div class='round'><input type='checkbox' id='checkbox' /><label for='checkbox'></label></div><label for='checkbox'>
-
-// dfdfdf</label>
-
-
-
-
-
-localStorage.setItem('listItems', $('#list-items').html());
-
-$('#todo-list-item').val("");
-}
-
-});
-
-$(document).on('change', '.checkbox', function() 
-{
-if($(this).attr('checked')) 
-{
-$(this).removeAttr('checked');
-} 
-else 
-{
-$(this).attr('checked', 'checked');
-}
-
-$(this).parent().toggleClass('completed');
-
-localStorage.setItem('listItems', $('#list-items').html());
-});
-
-$(document).on('click', '.remove', function() 
-{
-$(this).parent().remove();
-
-localStorage.setItem('listItems', $('#list-items').html());
-});
-
-});
+            $(".tdl-content2").on("change", "input[type=checkbox]", save);
+        });
     </script>
 </body>
 

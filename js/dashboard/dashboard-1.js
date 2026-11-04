@@ -2,7 +2,40 @@
     "use strict"
 
 
-    //todo list
+    //todo list（localStorage 持久化：数据以 JSON 纯文本存储，读取经 .text() 重建，防存储型 XSS）
+    var TODO_KEY = "24krmb-todo-index";
+
+    function todoBuild(text, done) {
+        var item = $("<li><label><input type='checkbox'><i></i><span></span><a href='#' class='ti-trash'></a></label></li>");
+        item.find("span").text(text);
+        item.find("input").prop("checked", !!done);
+        return item;
+    }
+
+    function todoSave() {
+        var items = [];
+        $("#todo_list li").each(function() {
+            items.push({
+                text: $(this).find("span").text(),
+                done: $(this).find("input").prop("checked")
+            });
+        });
+        try { localStorage.setItem(TODO_KEY, JSON.stringify(items)); } catch (e) {}
+    }
+
+    (function() {
+        var items = null;
+        try { items = JSON.parse(localStorage.getItem(TODO_KEY)); } catch (e) {}
+        if (items && items.length) {
+            var $ul = $("#todo_list").empty();
+            $.each(items, function(idx, item) {
+                $ul.append(todoBuild(item.text, item.done));
+            });
+        } else {
+            todoSave(); // 首次访问：以页面静态演示项为初始数据
+        }
+    })();
+
     $(".tdl-new").on('keypress', function(e) {
 
         var code = (e.keyCode ? e.keyCode : e.which);
@@ -19,11 +52,9 @@
 
             } else {
 
-                var item = $("<li><label><input type='checkbox'><i></i><span></span><a href='#' class='ti-trash'></a></label></li>");
+                $("#todo_list").append(todoBuild(v, false));
 
-                item.find("span").text(v);
-
-                $(".tdl-content ul").append(item);
+                todoSave();
 
                 $(this).val("");
 
@@ -47,11 +78,15 @@
 
             _li.remove();
 
+            todoSave();
+
         });
 
         return false;
 
     });
+
+    $(".tdl-content").on("change", "input[type=checkbox]", todoSave);
 
 
 

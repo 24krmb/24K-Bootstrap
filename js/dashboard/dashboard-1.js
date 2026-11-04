@@ -19,7 +19,11 @@
 
             } else {
 
-                $(".tdl-content ul").append("<li><label><input type='checkbox'><i></i><span>" + v + "</span><a href='#' class='ti-trash'></a></label></li>");
+                var item = $("<li><label><input type='checkbox'><i></i><span></span><a href='#' class='ti-trash'></a></label></li>");
+
+                item.find("span").text(v);
+
+                $(".tdl-content ul").append(item);
 
                 $(this).val("");
 
@@ -30,22 +34,6 @@
     });
 
 
-
-
-
-    $(".tdl-content a").on("click", function() {
-
-        var _li = $(this).parent().parent("li");
-
-        _li.addClass("remove").stop().delay(100).slideUp("fast", function() {
-
-            _li.remove();
-
-        });
-
-        return false;
-
-    });
 
 
 

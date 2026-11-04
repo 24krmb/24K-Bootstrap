@@ -148,3 +148,9 @@ quixSettings.prototype.manageResponsiveSidebar = function() {
         body.attr("data-sidebar-style", "overlay");
     }
 }
+
+// 占位链接统一为 href="#" 后，阻止默认行为（URL 追加 # 并滚动到页顶）。
+// 侧栏父菜单由 metisMenu 自行 preventDefault；此处兜底主题切换按钮与装饰性链接。
+$(document).on("click", 'a[href="#"]', function(e) {
+    e.preventDefault();
+});

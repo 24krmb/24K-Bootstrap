@@ -45,6 +45,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   --gray: #f7fafc;--gray-dark: #333333;
   --secondary: #9097c4;
   --light: #f8f9fa;--dark: #333333;
+  --radius: 0.65rem;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;--breakpoint-md: 768px;--breakpoint-lg: 992px;--breakpoint-xl: 1200px;--breakpoint-xxl: 1400;
   --font-family-main: "PingFang SC", "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -5442,45 +5443,16 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   .social-icons .googlePlus i, .social-icons .googlePlus span {
     color: #fff}
 
-.login-form__title {
-  color: #515E75;
-  margin-bottom: 20px}
 
-.login-form__btn {background: var(--primary);color: var(--btntxt);padding: 13px 40px;font-size: 14px}
-  .login-form__btn i, .login-form__btn span {font-size: 16px;padding-right: 5px}
-  .login-form__btn.submit {padding: 15px 40px;background: var(--primary);font-weight: 700}
 
-.login-form__intro p, .login-form__intro h4 {margin-bottom: 0;color: #6A7890}
 
-.login-form__intro h4 {
-  padding: 10px 0}
 
-.login-form__intro a {
-  color: #596A81;
-  text-decoration: underline}
 
-.login-input .form-group {
-  margin-bottom: 30px}
-  .login-input .form-group label {
-    color: #505F76;
-    font-size: 15px}
-  .login-input .form-group .form-control {
-    background: transparent;
-    border: 0;
-    border-radius: 0;
-    border-bottom: 1px solid var(--border);
-    padding-left: 0;
-    color: #7A88A1}
 
 .form-control:focus {
   box-shadow: none}
 
-.error-bg {
-  background: #AFB4C5}
 
-.error-text {
-  font-size: 5rem;
-  line-height: 5rem}
 
 #duration-value-axis {
   height: 450px;
@@ -6787,27 +6759,9 @@ table.dataTable thead .sorting::after{content:"";cursor:pointer;font-family:f
   .comming-soon__social li i {
     font-size: 1.8rem}
 
-#error body {
-  background: #fff}
 
-.error-content {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column}
 
-.error-text {
-  font-size: 5rem;
-  line-height: 5rem;
-  color: var(--primary)}
 
-#password-page1 body {
-  background: url(../../assets/images/background/password-bg.jpg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  width: 100%;
-  position: relative}
 
 #invoice {
   position: relative;
@@ -6966,44 +6920,9 @@ table.dataTable thead .sorting::after{content:"";cursor:pointer;font-family:f
   width: 100%;
   position: relative}
 
-#login-page2 body {
-  background: url(../../assets/images/background/login-register2.jpg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  width: 100%;
-  position: relative}
-  #login-page2 body::after {
-    position: absolute;
-    content: '';
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background: rgba(34, 144, 255, 0.5);
-    z-index: -1}
 
-#login-page1 body {
-  background: url(../../assets/images/background/login-bg.jpg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  width: 100%;
-  position: relative}
 
-.form-input-content {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column}
 
-#userLock-page1 body {
-  background: url(../../assets/images/background/user-lock-bg.jpg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  width: 100%;
-  position: relative}
 
 /*  1 - media screen and (max-width: 1750px)
 ---------------------------------------------------------------------- */
@@ -7665,8 +7584,6 @@ html[dir=rtl] [direction=rtl][data-sidebar-style=compact]:not([data-layout=horiz
 [data-theme-version=dark] .support-tickets .problems-list-wrapper .problems-list>li{border-bottom:1px solid rgba(120,130,140,.13)}
 [data-theme-version=dark] .ticket-comment-form label{border:1px solid rgba(120,130,140,.13)}
 [data-theme-version=dark] .pricing-wrapper .single-pricing-table .btn{color:#abafb3;border-color:rgba(120,130,140,.13)}
-[data-theme-version=dark] .login-form a{color:#fff}
-[data-theme-version=dark] .error-content a{color:#fff}
 [data-theme-version=dark] .currency-exchange .input-group-append button{background-color:#181818;border-color:rgba(120,130,140,.13)}
 [data-theme-version=dark] .drop-menu .select{color:#fff}
 [data-theme-version=dark] .table-trans tbody tr td{color:#abafb3}

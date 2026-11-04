@@ -1,6 +1,6 @@
 # 24K-Bootstrap — Dashboard Template
 
-> 台管理界面模板，基于 **Bootstrap 4.1.3** 构建。
+> 台管理界面模板，基于 **Bootstrap** 构建。
 > 纯静态 HTML/CSS/JS 项目，解压即用，无需安装依赖、无需构建工具。
 
 ## 项目简介

@@ -58,7 +58,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 body[data-theme-version="dark"] {/* 暗色覆盖 */
   --primary:#F4D1B4;--menu-hover-bg:rgba(244, 209, 180,.1);--item-hover-bg: rgba(244, 209, 180,.1);
   --bc1: #181818;--bc2: #232323;--border:rgba(255,255,255,0.1);--box-shadow:none;
-  --fc1:#b4b8bf;--fc2:#33517E;--btntxt:#000;
+  --fc1:#b4b8bf;--fc2:#73757a;--btntxt:#000;
   --24k-bg-sidebar: #232323;
   --24k-bg-sidebar-sub: #232323;
   --24k-menu-link: #ddd;

@@ -163,7 +163,9 @@ let dataSet = [
     // Setup - add a text input to each footer cell
     $('#example-api-1 tfoot th').each( function () {
         var title = $(this).text();
-        $(this).html( '<input type="text"  placeholder="Search '+title+'" />' );
+        $(this).empty().append(
+            $('<input type="text"/>').attr('placeholder', 'Search ' + title)
+        );
     } );
  
     // DataTable - individual column searching by text

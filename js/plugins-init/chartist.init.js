@@ -227,7 +227,14 @@
     var $point = $(this),
       value = $point.attr('ct:value'),
       seriesName = $point.parent().attr('ct:series-name');
-    $toolTip.html(seriesName + '<br>' + value).show();
+    $toolTip
+      .empty()
+      .append(
+        $('<span>').text(seriesName),
+        $('<br>'),
+        $('<span>').text(value)
+      )
+      .show();
   });
   
   $chart.on('mouseleave', '.ct-point', function() {

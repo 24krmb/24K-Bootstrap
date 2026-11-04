@@ -56,8 +56,8 @@ $(function($) {
     var v, up=0,down=0,i=0
         ,$idir = $("div.idir")
         ,$ival = $("div.ival")
-        ,incr = function() { i++; $idir.show().html("+").fadeOut(); $ival.html(i); }
-        ,decr = function() { i--; $idir.show().html("-").fadeOut(); $ival.html(i); };
+        ,incr = function() { i++; $idir.show().text("+").fadeOut(); $ival.text(i); }
+        ,decr = function() { i--; $idir.show().text("-").fadeOut(); $ival.text(i); };
     $("input.infinite").knob(
         {
             min : 0

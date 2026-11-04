@@ -166,7 +166,7 @@ $(function () {
         case 'getCroppedCanvas':
           if (result) {
             // Bootstrap's Modal
-            $('#getCroppedCanvasModal').modal().find('.modal-body').html(result);
+            $('#getCroppedCanvasModal').modal().find('.modal-body').empty().append(result);
 
             if (!$download.hasClass('disabled')) {
               download.download = uploadedImageName;

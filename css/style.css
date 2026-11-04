@@ -44,7 +44,6 @@ body[data-theme-version="dark"] {/* 暗色覆盖 */
   --24k-menu-active-text: #fff}
   .nav-header .theme-toggle, .header .theme-toggle {position: absolute;right: 1.25rem;top: 0;height: 100%;display: flex;align-items: center;z-index: 99}.theme-toggle-btn {color: var(--24k-text-muted, #abafb3);font-size: 1.375rem;display: inline-block;padding: 0.25rem 0.5rem;line-height: 1}.theme-toggle-btn:hover, .theme-toggle-btn:focus {color: var(--primary);text-decoration: none}.header .theme-toggle-btn i {vertical-align: middle}
   body {/* 24K 主题变量（亮色默认） */
-  
   --primary:#66F;--menu-hover-bg:rgba(117, 113, 249,.1);--24k-menu-hover-text: var(--primary);
   --item-hover-bg: rgba(117, 113, 249,.1);
   --bc1: #F3F3F9;--bc2: #fff;--border:rgb(214,227,255);--box-shadow:rgba(102, 102, 255,.1);

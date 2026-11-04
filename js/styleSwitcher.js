@@ -3,13 +3,13 @@
 
     // 24K 主题切换：顶栏按钮，单击循环 自动(auto) → 亮色(light) → 暗色(dark)
     var MODES = ["auto", "light", "dark"];
-    var ICONS = { auto: "mdi-brightness-auto", light: "mdi-white-balance-sunny", dark: "mdi-weather-night" };
+    var ICONS = { auto: "fa-adjust", light: "fa-sun-o", dark: "fa-moon-o" };
     var LABELS = { auto: "自动（跟随系统）", light: "亮色", dark: "暗色" };
 
     function refreshButton(mode) {
         var $btn = $(".theme-toggle-btn");
         if (!$btn.length) { return; }
-        $btn.find("i").removeClass().addClass("mdi " + ICONS[mode]);
+        $btn.find("i").removeClass().addClass("fa " + ICONS[mode]);
         var label = "主题：" + LABELS[mode] + "（点击切换）";
         $btn.attr("title", label).attr("aria-label", label);
     }

@@ -2990,3 +2990,16 @@ html[dir=rtl] [direction=rtl][data-sidebar-style=compact]:not([data-layout=horiz
 [data-theme-version=dark] .input-group.input-with-img .form-control{background-color:#181818;border-color:rgba(120,130,140,.13)}
 [data-theme-version=dark] .card.card-full-width ul.contact-address-list>li:not(:last-child):after,[data-theme-version=dark] .user-intro::after{background-color:rgba(120,130,140,.13)}
 
+/* ===== 恢复缺失的 .label 标签组件（上游 quixlab-master 定义） ===== */
+.label{padding:7px 10px;line-height:15px;font-weight:600;border-radius:4px;font-size:85%}
+.label-pill{border-radius:10rem;padding-left:0.6em;padding-right:0.6em}
+.label-rounded{border-radius:60px}
+.label-secondary{background-color:#7571f9;color:#fff}
+.label-primary{background-color:#9097c4;color:#fff}
+.label-success{background-color:#6fd96f;color:#fff}
+.label-info{background-color:#4d7cff;color:#fff}
+.label-warning{background-color:#f29d56;color:#fff}
+.label-danger{background-color:#ff5e5e;color:#fff}
+.label-dark{background-color:#464a53;color:#fff}
+.label-light{background-color:#5e5e5e;color:#fff}
+.bootstrap-label .label{margin-bottom:10px;display:inline-block}

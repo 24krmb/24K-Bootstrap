@@ -10,7 +10,8 @@
         var $btn = $(".theme-toggle-btn");
         if (!$btn.length) { return; }
         $btn.find("i").removeClass().addClass("mdi " + ICONS[mode]);
-        $btn.attr("title", "主题：" + LABELS[mode] + "（点击切换）");
+        var label = "主题：" + LABELS[mode] + "（点击切换）";
+        $btn.attr("title", label).attr("aria-label", label);
     }
 
     function applyMode(mode) {

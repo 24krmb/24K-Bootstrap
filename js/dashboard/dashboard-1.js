@@ -285,7 +285,7 @@
                     },
                     scaleLabel: {
                         display: false,
-                        labelString: 'Month'
+                        labelString: '月份'
                     }
                 }],
                 yAxes: [{
@@ -296,7 +296,7 @@
                     },
                     scaleLabel: {
                         display: true,
-                        labelString: 'Value'
+                        labelString: '数值'
                     }
                 }]
             },
@@ -320,7 +320,7 @@
     new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+            labels: ["1月", "2月", "3月", "4月", "5月", "6月"],
             type: 'line',
             defaultFontFamily: 'Montserrat',
             datasets: [{
@@ -368,7 +368,7 @@
                     },
                     scaleLabel: {
                         display: false,
-                        labelString: 'Month'
+                        labelString: '月份'
                     }
                 }],
                 yAxes: [{
@@ -379,7 +379,7 @@
                     },
                     scaleLabel: {
                         display: true,
-                        labelString: 'Value'
+                        labelString: '数值'
                     }
                 }]
             },

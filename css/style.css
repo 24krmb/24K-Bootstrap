@@ -151,7 +151,7 @@ hr{margin-top:1rem;margin-bottom:1rem;border:0;border-top:1px solid rgba(0,0,0,.
 .list-inline-item:not(:last-child){margin-right:.5rem}
 .initialism{font-size:90%;text-transform:uppercase}
 .blockquote{margin-bottom:1rem;font-size:1.09375rem}
-.blockquote-footer{display:block;font-size:80%;color:#f7fafc}
+.blockquote-footer{display:block;font-size:80%}
 .blockquote-footer::before{content:"\2014 \00A0"}
 .img-fluid{max-width:100%;height:auto}
 .img-thumbnail{padding:.25rem;background-color:#f3f3f9;border:1px solid #dee2e6;border-radius:.25rem;max-width:100%;height:auto}
@@ -1000,8 +1000,7 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
   padding: 0.5rem 1rem}
   .nav-link:hover, .nav-link:focus {
     text-decoration: none}
-  .nav-link.disabled {
-    color: #f7fafc}
+  .nav-link.disabled {color: var(--fc1)}
 
 .nav-tabs {
   border-bottom: 1px solid var(--border)}
@@ -1014,7 +1013,6 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
     .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
       border-color: var(--border)}
     .nav-tabs .nav-link.disabled {
-      color: #f7fafc;
       background-color: transparent;
       border-color: transparent}
   .nav-tabs .nav-link.active,
@@ -3313,7 +3311,7 @@ body{overflow-x:hidden;height:100%;box-sizing:border-box;position:relative;max-w
 #main-wrapper{opacity:0;transition:all .25s ease-in;overflow:hidden;position:relative}
 #main-wrapper.show{opacity:1}
 .page-heading{font-size:1.125rem;color:#333}
-a{transition:all .4s ease-in-out;color:#76838f}
+a{transition:all .4s ease-in-out;color:var(--fc1)}
 a:focus,a:hover{text-decoration:none}
 a.link{color:#464a53}
 a.link:focus,a.link:hover{color:#4d7cff}
@@ -3324,7 +3322,7 @@ li{list-style:none}
 .img-flag{height:1.5rem;width:1.8rem}
 .img-full{width:100%}
 .mdi-set,.mdi:before{line-height:initial}
-blockquote{background:#f3f3f9;font-weight:500;color:#262626;line-height:1.8;padding:1rem 1.875rem}
+blockquote{background:var(--bc1);font-weight:500;line-height:1.8;padding:1rem 1.875rem}
 .vertical-seperator{width:1px;display:inline-block;min-height:35px;background:#999;vertical-align:middle;margin:0 15px}
 .vertical-seperator--small{min-height:13px;margin:0 5px}
 h6{font-weight:400}

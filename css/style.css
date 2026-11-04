@@ -62,7 +62,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 body[data-theme-version="dark"] {/* 暗色覆盖 */
   --primary:#F4D1B4;--menu-hover-bg: #F4D1B4;--item-hover-bg: rgba(244, 209, 180,.1);
   --bc1: #181818;--bc2: #232323;--border:rgba(255,255,255,0.1);--box-shadow:none;
-  --fc1:#b4b8bf;--btntxt:#000;
+  --fc1:#b4b8bf;--fc2:#33517E;--btntxt:#000;
   --24k-bg-sidebar: #232323;
   --24k-bg-sidebar-sub: #232323;
   --24k-text: #abafb3;
@@ -79,7 +79,7 @@ body {/* 24K 主题变量（亮色默认） */
   --primary:#7571f9;--menu-hover-bg:#7571f9;--24k-menu-hover-text: var(--primary);
   --item-hover-bg: rgba(117, 113, 249,.1);
   --bc1: #F3F3F9;--bc2: #fff;--border:rgb(214,227,255);--box-shadow:#a99de7;
-  --fc1:#183153;--btntxt:#fff;
+  --fc1:#183153;--fc2:#73757a;--btntxt:#fff;
   --24k-bg-sidebar: #fff;
   --24k-bg-sidebar-sub: #fafafa;
   --24k-text: #76838f;

@@ -45,6 +45,23 @@
 └── images/                 # 静态图片
 ```
 
+## 图标库
+
+项目自带 10 套图标库（位于 `icons/`），全部由 `css/style.css` 顶部 `@import` 统一加载，页面无需单独引用。
+
+| 图标库 | 类名前缀 | 版本 | 图标数量  |
+| --- | --- | --- | --- |
+| Simple Line Icons | `icon-*` | 未标注 | 183 |
+| Material Design Icons | `mdi mdi-*` | 未标注 | 2,519 |
+| Font Awesome | `fa fa-*` | 4.7.0 | 786 |
+| Themify Icons | `ti-*` | 未标注 | 352 |
+| Cryptocoins | `cc` + 币种类 | 未标注 | 144|
+| Ionicons | `ion-*` | 2.0.0 | 733 |
+| Weather Icons | `wi wi-*` | 2.0 | 572 |
+| Linea Icons | `icon-<分组>-*` | 未标注 | 716 |
+| PE Icon Set – Weather | `pe-is-w-*` | 未标注 | 208 |
+| Flag Icons | `flag-icon-*`（SVG） | 未标注 | 249 |
+
 ## 快速开始
 
 无需 `npm install`，直接用浏览器打开即可：

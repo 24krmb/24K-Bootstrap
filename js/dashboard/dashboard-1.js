@@ -102,9 +102,17 @@
     "use strict"
 
     var i = new Datamap( {
-        scope: "world", 
+        scope: "chn", 
         element: document.getElementById("world-map"), 
         responsive: !0, 
+        setProjection: function (element, options) {
+            var projection = d3.geo.equirectangular()
+                .center([104.5, 36.5])
+                .scale(750)
+                .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
+            var path = d3.geo.path().projection(projection);
+            return { path: path, projection: projection };
+        },
         geographyConfig: {
             popupOnHover: !1, 
             highlightOnHover: !1, 
@@ -133,21 +141,14 @@
         }
     });
     
-    i.bubbles([{
-        centered: "USA", fillKey: "white", radius: 5, sold: "$500", country: "United States"
-    }, {
-        centered: "SAU", fillKey: "Visited", radius: 5, sold: "$900", country: "Saudia Arabia"
-    }, {
-        centered: "RUS", fillKey: "neato", radius: 5, sold: "$250", country: "Russia"
-    }, {
-        centered: "CAN", fillKey: "white", radius: 5, sold: "$1000", country: "Canada"
-    }, {
-        centered: "IND", fillKey: "Visited", radius: 5, sold: "$50", country: "India"
-    }, {
-        centered: "AUS", fillKey: "white", radius: 5, sold: "$700", country: "Australia"
-    }, {
-        centered: "BGD", fillKey: "Visited", radius: 5, sold: "$1500", country: "Bangladesh"
-    }
+    i.bubbles([
+        { latitude: 39.9, longitude: 116.4, radius: 5, fillKey: "white", sold: "¥1,200", country: "北京" },
+        { latitude: 31.23, longitude: 121.47, radius: 5, fillKey: "white", sold: "¥900", country: "上海" },
+        { latitude: 23.13, longitude: 113.26, radius: 5, fillKey: "white", sold: "¥250", country: "广州" },
+        { latitude: 22.54, longitude: 114.06, radius: 5, fillKey: "white", sold: "¥1,000", country: "深圳" },
+        { latitude: 30.57, longitude: 104.07, radius: 5, fillKey: "white", sold: "¥50", country: "成都" },
+        { latitude: 30.27, longitude: 120.15, radius: 5, fillKey: "white", sold: "¥700", country: "杭州" },
+        { latitude: 30.59, longitude: 114.31, radius: 5, fillKey: "white", sold: "¥1,500", country: "武汉" }
     ]),
     window.addEventListener("resize", function (e) {
         i.resize()

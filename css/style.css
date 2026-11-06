@@ -1353,7 +1353,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
       -ms-flex-direction: column;
       flex-direction: column;
       position: relative;
-      color: var(--24k-menu-link)}.nk-sidebar .metismenu > li > a {
+      color: var(--fc2)}.nk-sidebar .metismenu > li > a {
         transition: none}.nk-sidebar .metismenu > li:hover i, .nk-sidebar .metismenu > li:focus i, .nk-sidebar .metismenu > li.active i {
         color: var(--fc1)}.nk-sidebar .metismenu > li:hover span, .nk-sidebar .metismenu > li:focus span, .nk-sidebar .metismenu > li.active span {
         color: var(--fc1)}.nk-sidebar .metismenu > li:hover > a {

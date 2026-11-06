@@ -32,7 +32,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 html {scrollbar-width: none;-ms-overflow-style: none}html::-webkit-scrollbar {display: none}html {line-height: 1.15;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;-ms-overflow-style: scrollbar;-webkit-tap-highlight-color: rgba(0, 0, 0, 0)}@-ms-viewport {width: device-width}article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {display: block}
 body[data-theme-version="dark"] {/* 暗色覆盖 */
   --primary:#66f;--menu-hover-bg:rgba(244, 209, 180,.1);--item-hover-bg: rgba(244, 209, 180,.1);
-  --bc1: #171E44;--bc2:rgba(255, 255, 255, 0.07);--bc3:#272E51;
+  --bc1: #171E44;--bc2:#272E51;--bc3:#272E51;
   --border:rgba(255,255,255,0.1);--box-shadow:none;
   --fc1:rgb(255, 255, 255);--fc2:rgba(255, 255, 255,.7);--btntxt:#000;
   --24k-bg-sidebar: #232323;
@@ -1203,20 +1203,24 @@ button.bg-dark:focus {
     display: none}@media only screen and (min-width: 1200px) and (max-width: 1350px) {.nav-header {
       width: 14.375rem}}.nav-header .brand-logo {
     z-index: 999}.nav-header .brand-logo a {
-      padding: 1rem 1.8125rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 3rem;
+      padding: 0 .625rem
       display: block}.nav-header .brand-logo a i {
         font-size: 1.375rem}.nav-header .brand-logo a b img {
-        max-width: 1.5625rem;
+        display: block;max-width: 1.5625rem;
         max-height: 1.25rem;
         height: auto}.nav-header .brand-logo a span {
         font-size: 1.125rem}.nav-header .brand-logo a span.logo-compact img {
         max-height: 1.25rem;
         max-width: 100%;
         height: auto}.nav-header .brand-logo a span.brand-title img {
-        max-height: 1.75rem;
-        max-width: 100%;
-        height: auto;
-        width: auto}.nav-control {
+        display: block;
+        height: 1.5rem;
+        width: auto;
+        max-width: none}.nav-control {
   cursor: pointer;
   position: absolute;
   left: 1.4375rem;
@@ -1224,7 +1228,7 @@ button.bg-dark:focus {
   top: 46%;
   transform: translateY(-50%)}@media (max-width: 575.98px) {.nav-control {
       left: .4375rem}}.nav-control .hamburger.active {
-    z-index: -1}.hamburger{display:inline-block;right:0;position:relative;top:.3125rem;-webkit-transition:all .3s ease-in-out 0s;transition:all .3s ease-in-out 0s;width:2.3125rem;z-index:999}.hamburger.is-active{left:0;z-index:9}.hamburger .toggle-icon {font-size: 1.4rem;line-height: 2rem;color: var(--primary)}.hamburger:hover {cursor: pointer}@media (min-width:767px){[data-sidebar-style=compact] .nav-control{display:none}[data-sidebar-style=compact] .nav-header{width:9.375rem}}[data-sidebar-style=full][data-layout=vertical] .menu-toggle .brand-title{display:none}[data-sidebar-style=full][data-layout=vertical] .menu-toggle .nav-header .logo-abbr{display:block}[data-sidebar-style=mini] .nav-header .logo-abbr{display:block}[data-sidebar-style=compact] .nav-header .brand-title{display:none}[data-sidebar-style=compact] .nav-header .logo-compact{display:block}.header{height:3rem;z-index:1;position:relative;padding:0 .9375rem;background:var(--bc1);margin-left:10.1875rem;transition:all .2s ease}.header .header-content{height:100%}@media (max-width:767px){.nav-header{width:3.75rem}.nav-header .brand-title{display:none}.header-content{margin-left:3.75rem}[direction=rtl] .header-content{margin-left:0}}[data-sidebar-style="full"] .header, [data-sidebar-style="overlay"] .header {
+    z-index: -1}.hamburger{display:inline-block;right:0;position:relative;top:.125rem;-webkit-transition:all .3s ease-in-out 0s;transition:all .3s ease-in-out 0s;width:2.3125rem;z-index:999}.hamburger.is-active{left:0;z-index:9}.hamburger .toggle-icon {font-size: 1.4rem;line-height: 2rem;color: var(--primary)}.hamburger:hover {cursor: pointer}@media (min-width:767px){[data-sidebar-style=compact] .nav-control{display:none}[data-sidebar-style=compact] .nav-header{width:9.375rem}}[data-sidebar-style=full][data-layout=vertical] .menu-toggle .brand-title{display:none}[data-sidebar-style=full][data-layout=vertical] .menu-toggle .nav-header .logo-abbr{display:block}[data-sidebar-style=mini] .nav-header .logo-abbr{display:block}[data-sidebar-style=compact] .nav-header .brand-title{display:none}[data-sidebar-style=compact] .nav-header .logo-compact{display:block}.header{height:3rem;z-index:1;position:relative;padding:0 .9375rem;background:var(--bc1);margin-left:10.1875rem;transition:all .2s ease}.header .header-content{height:100%}@media (max-width:767px){.nav-header{width:3.75rem}.nav-header .brand-title{display:none}.header-content{margin-left:3.75rem}[direction=rtl] .header-content{margin-left:0}}[data-sidebar-style="full"] .header, [data-sidebar-style="overlay"] .header {
   width: calc(100% - 10.1875rem)}@media only screen and (min-width: 1200px) and (max-width: 1350px) {[data-sidebar-style="full"] .header, [data-sidebar-style="overlay"] .header {
       width: calc(100% - 14.375rem);
       margin-left: 14.375rem}}@media only screen and (max-width: 767px) {[data-sidebar-style="full"] .header, [data-sidebar-style="overlay"] .header {
@@ -1334,7 +1338,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   top: 0.625rem}.content-body {
   margin-left: 10.1875rem;
   z-index: 0}@media only screen and (min-width: 1200px) and (max-width: 1350px) {.content-body {
-      margin-left: 14.375rem}}.nk-sidebar {width: 10.1875rem;padding-bottom: 112px;height: 100%;position: absolute;top: 3rem;padding-top: 0;z-index: 99;background: var(--bc2);transition: all .2s ease}@media only screen and (min-width: 1200px) and (max-width: 1350px) {.nk-sidebar {
+      margin-left: 14.375rem}}.nk-sidebar {width: 10.1875rem;padding-bottom: 112px;height: 100%;position: absolute;top: 3rem;padding-top: 0;z-index: 99;background: var(--bc1);transition: all .2s ease}@media only screen and (min-width: 1200px) and (max-width: 1350px) {.nk-sidebar {
       width: 14.375rem}}.nk-sidebar ul {
     padding: 0;
     margin: 0;
@@ -1359,14 +1363,10 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
         color: var(--fc1)}.nk-sidebar .metismenu > li:hover span, .nk-sidebar .metismenu > li:focus span, .nk-sidebar .metismenu > li.active span {
         color: var(--fc1)}.nk-sidebar .metismenu > li:hover > a {
         background: var(--menu-hover-bg);
-        color: var(--24k-menu-hover-text)}.nk-sidebar .metismenu > li.active > a {
-        *background: var(--primary);
-        color: var(--primary)}.nk-sidebar .metismenu > li a > i {
-        font-size: 0.95rem;
-        display: inline-block;
-        vertical-align: middle;
-        padding: 0 0.4375rem 0 0;
-        color: var(--24k-menu-link-strong)}.nk-sidebar .metismenu a {
+        color: var(--24k-menu-hover-text)}
+        .nk-sidebar .metismenu > li.active > a {*background: var(--bc2);color: var(--primary)}
+        .nk-sidebar .metismenu > li a > i {font-size: 0.95rem;display: inline-block;vertical-align: middle;padding: 0 0.4375rem 0 0;color: var(--24k-menu-link-strong)}
+        .nk-sidebar .metismenu a {
       position: relative;
       display: block;
       padding: 0.8125rem 1.25rem;
@@ -1379,7 +1379,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
       color:var(--primary)}.nk-sidebar .metismenu a {
       transition: all 0.4s ease-in-out}.nk-sidebar .metismenu a:hover, .nk-sidebar .metismenu a:active, .nk-sidebar .metismenu a.active {
         text-decoration: none;color: var(--primary);
-        background-color: var(--item-hover-bg)}.nk-sidebar .metismenu .has-arrow:after {
+        background-color: var(--bc2);border-radius:var(--radius);}.nk-sidebar .metismenu .has-arrow:after {
       position: absolute;
       content: "";
       width: .5em;
@@ -1424,7 +1424,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 [data-sidebar-style="full"][data-layout="vertical"] .menu-toggle .nav-header {
   width: 3.75rem}[data-sidebar-style="full"][data-layout="vertical"] .menu-toggle .nav-header .brand-logo {
     z-index: 999}[data-sidebar-style="full"][data-layout="vertical"] .menu-toggle .nav-header .brand-logo a {
-      padding: 1.607rem 1.0625rem;
+      padding: 0 1.0625rem;
       text-align: center}[data-sidebar-style="full"][data-layout="vertical"] .menu-toggle .nav-header .nav-control .hamburger .line {
     background-color: #464a53 !important}[data-sidebar-style="full"][data-layout="vertical"] .menu-toggle .header {
   margin-left: 3.75rem;
@@ -1524,7 +1524,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sidebar-style="mini"] .nav-header {
     width: 3.75rem}[data-sidebar-style="mini"] .nav-header .brand-logo {
       z-index: 999}[data-sidebar-style="mini"] .nav-header .brand-logo a {
-        padding: 1.607rem 1.0625rem}[data-sidebar-style="mini"] .nav-header .brand-logo a b img {
+        padding: 0 1.0625rem}[data-sidebar-style="mini"] .nav-header .brand-logo a b img {
           margin-top: 0.4375rem}[data-sidebar-style="mini"] .nav-header .nav-control {
       z-index: -1}[data-sidebar-style="mini"] .nav-header .nav-control .hamburger {
         left: 3.75rem !important}[data-sidebar-style="mini"] .nav-header .nav-control .hamburger .line {
@@ -2687,9 +2687,6 @@ html[dir=rtl] [direction=rtl] .footer{padding-right:27.5rem;padding-left:0}
 [data-theme-version=dark] .border-right{border-right:1px solid rgba(120,130,140,.13)!important}
 [data-theme-version=dark] .border-top{border-top:1px solid rgba(120,130,140,.13)!important}
 [data-theme-version=dark] .card.transparent-card{background:0 0}
-
-[data-theme-version=dark] .nk-sidebar .metismenu>li:focus>a,[data-theme-version=dark] .nk-sidebar .metismenu>li:hover>a{background:var(--menu-hover-bg);color:var(--24k-menu-hover-text)}
-[data-theme-version=dark] .nk-sidebar .metismenu a{color:var(--24k-menu-link)}
 [data-theme-version=dark] .tickercontainer li{color:#abafb3}
 [data-theme-version=dark] #calendar .fc-header-toolbar button{background-color:#181818;color:#fff}
 [data-theme-version=dark] #calendar .fc-header-toolbar button.fc-state-hover,[data-theme-version=dark] #calendar .fc-header-toolbar button:hover{background-color:#181818!important}

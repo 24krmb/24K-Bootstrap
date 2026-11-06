@@ -1433,7 +1433,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     margin-left: 0}[data-sidebar-style="full"][data-layout="vertical"] .menu-toggle .nk-sidebar {
   width: 3.75rem;
   overflow: visible;
-  position: absolute}[data-sidebar-style="full"][data-layout="vertical"] .menu-toggle .nk-sidebar .nav-text {
+  position: fixed}[data-sidebar-style="full"][data-layout="vertical"] .menu-toggle .nk-sidebar .nav-text {
     display: none}[data-sidebar-style="full"][data-layout="vertical"] .menu-toggle .nk-sidebar .slimScrollDiv,
   [data-sidebar-style="full"][data-layout="vertical"] .menu-toggle .nk-sidebar .nk-nav-scroll {
     overflow: visible !important}[data-sidebar-style="full"][data-layout="vertical"] .menu-toggle .nk-sidebar .metismenu li {

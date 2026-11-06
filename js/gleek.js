@@ -5,7 +5,7 @@
         layout: "vertical", //唯一选项："vertical"（水平布局已移除）
         sidebarStyle: "full", //定义侧边栏的外观样式，可选："full"、"compact"、"mini"和"overlay"
         headerPosition: "static", //两种选项："static"（静态）和 "fixed"（固定）
-        containerLayout: "wide",  //唯一选项："wide"（盒装布局已移除）
+        containerLayout: "wide",  //唯一选项："wide"
         direction: "ltr" //"ltr" = 从左到右；"rtl" = 从右到左
     });
 })(jQuery);

@@ -7,8 +7,6 @@
     <title>24K-Design Template by 24krmb.com</title>
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
     <link href="./plugins/pg-calendar/css/pignose.calendar.min.css" rel="stylesheet"><!-- Pignose 日历 -->
-    <link rel="stylesheet" href="./plugins/chartist/css/chartist.min.css">
-    <link rel="stylesheet" href="./plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css">
     <link href="css/style.css" rel="stylesheet"><!-- 模板自定义样式表 -->
 </head>
 <body>
@@ -336,21 +334,57 @@
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="card">
-                                <div class="card-body px-0">
-                                    <h4 class="card-title px-4 mb-3">待办事项</h4>
-                                    <div class="todo-list">
-                                        <div class="tdl-holder">
-                                            <div class="tdl-content">
-                                                <ul id="todo_list">
-                                                    <li><label><input type="checkbox"><i></i><span>起床</span><a href='#' class="fa fa-trash"></a></label></li>
-                                                    <li><label><input type="checkbox" checked><i></i><span>开晨会</span><a href='#' class="fa fa-trash"></a></label></li>
-                                                    <li><label><input type="checkbox"><i></i><span>别放弃</span><a href='#' class="fa fa-trash"></a></label></li>
-                                                    <li><label><input type="checkbox" checked><i></i><span>做点其他事</span><a href='#' class="fa fa-trash"></a></label></li>
-                                                </ul>
-                                            </div>
-                                            <div class="px-4">
-                                                <input type="text" class="tdl-new form-control" placeholder="输入新事项后按回车...">
-                                            </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">动态</h4>
+                                    <div id="activity">
+                                        <div class="media border-bottom-1 pt-3 pb-3">
+                                            <img width="35" src="./images/avatar/1.png" class="mr-3 rounded-circle">
+                                            <div class="media-body">
+                                                <h5>收到新订单</h5>
+                                                <p class="mb-0">几个月前我把它分享到了我的社交主页，</p>
+                                            </div><span class="text-muted ">2018 年 4 月 24 日</span>
+                                        </div>
+                                        <div class="media border-bottom-1 pt-3 pb-3">
+                                            <img width="35" src="./images/avatar/2.png" class="mr-3 rounded-circle">
+                                            <div class="media-body">
+                                                <h5>iPhone 已送达</h5>
+                                                <p class="mb-0">几个月前我把它分享到了我的社交主页，</p>
+                                            </div><span class="text-muted ">2018 年 4 月 24 日</span>
+                                        </div>
+                                        <div class="media border-bottom-1 pt-3 pb-3">
+                                            <img width="35" src="./images/avatar/2.png" class="mr-3 rounded-circle">
+                                            <div class="media-body">
+                                                <h5>3 笔订单待处理</h5>
+                                                <p class="mb-0">几个月前我把它分享到了我的社交主页，</p>
+                                            </div><span class="text-muted ">2018 年 4 月 24 日</span>
+                                        </div>
+                                        <div class="media border-bottom-1 pt-3 pb-3">
+                                            <img width="35" src="./images/avatar/2.png" class="mr-3 rounded-circle">
+                                            <div class="media-body">
+                                                <h5>新经理入职</h5>
+                                                <p class="mb-0">几个月前我把它分享到了我的社交主页，</p>
+                                            </div><span class="text-muted ">2018 年 4 月 24 日</span>
+                                        </div>
+                                        <div class="media border-bottom-1 pt-3 pb-3">
+                                            <img width="35" src="./images/avatar/2.png" class="mr-3 rounded-circle">
+                                            <div class="media-body">
+                                                <h5>门店延迟 5 分钟营业</h5>
+                                                <p class="mb-0">几个月前我把它分享到了我的社交主页，</p>
+                                            </div><span class="text-muted ">2018 年 4 月 24 日</span>
+                                        </div>
+                                        <div class="media border-bottom-1 pt-3 pb-3">
+                                            <img width="35" src="./images/avatar/2.png" class="mr-3 rounded-circle">
+                                            <div class="media-body">
+                                                <h5>收到新支持工单</h5>
+                                                <p class="mb-0">几个月前我把它分享到了我的社交主页，</p>
+                                            </div><span class="text-muted ">2018 年 4 月 24 日</span>
+                                        </div>
+                                        <div class="media pt-3 pb-3">
+                                            <img width="35" src="./images/avatar/3.png" class="mr-3 rounded-circle">
+                                            <div class="media-body">
+                                                <h5>Facebook 帖子获 30 条评论</h5>
+                                                <p class="mb-0">几个月前我把它分享到了我的社交主页，</p>
+                                            </div><span class="text-muted ">2018 年 4 月 24 日</span>
                                         </div>
                                     </div>
                                 </div>
@@ -538,115 +572,6 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-xl-3 col-lg-6 col-sm-6 col-xxl-6">
-
-                        <div class="card">
-                            <div class="chart-wrapper mb-4">
-                                <div class="px-4 pt-4 d-flex justify-content-between">
-                                    <div>
-                                        <h4>销售活动</h4>
-                                        <p>近 6 个月</p>
-                                    </div>
-                                    <div>
-                                        <span><i class="fa fa-caret-up text-success"></i></span>
-                                        <h4 class="d-inline-block text-success">720</h4>
-                                        <p class=" text-danger">+120.5(5.0%)</p>
-                                    </div>
-                                </div>
-                                <div>
-                                        <canvas id="chart_widget_3"></canvas>
-                                </div>
-                            </div>
-                            <div class="card-body border-top pt-4">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <ul>
-                                            <li>5% 差评</li>
-                                            <li>95% 好评</li>
-                                        </ul>
-                                        <div>
-                                            <h5>客户反馈</h5>
-                                            <h3>385749</h3>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div id="chart_widget_3_1"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-sm-6 col-xxl-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">动态</h4>
-                                <div id="activity">
-                                    <div class="media border-bottom-1 pt-3 pb-3">
-                                        <img width="35" src="./images/avatar/1.png" class="mr-3 rounded-circle">
-                                        <div class="media-body">
-                                            <h5>收到新订单</h5>
-                                            <p class="mb-0">几个月前我把它分享到了我的社交主页，</p>
-                                        </div><span class="text-muted ">2018 年 4 月 24 日</span>
-                                    </div>
-                                    <div class="media border-bottom-1 pt-3 pb-3">
-                                        <img width="35" src="./images/avatar/2.png" class="mr-3 rounded-circle">
-                                        <div class="media-body">
-                                            <h5>iPhone 已送达</h5>
-                                            <p class="mb-0">几个月前我把它分享到了我的社交主页，</p>
-                                        </div><span class="text-muted ">2018 年 4 月 24 日</span>
-                                    </div>
-                                    <div class="media border-bottom-1 pt-3 pb-3">
-                                        <img width="35" src="./images/avatar/2.png" class="mr-3 rounded-circle">
-                                        <div class="media-body">
-                                            <h5>3 笔订单待处理</h5>
-                                            <p class="mb-0">几个月前我把它分享到了我的社交主页，</p>
-                                        </div><span class="text-muted ">2018 年 4 月 24 日</span>
-                                    </div>
-                                    <div class="media border-bottom-1 pt-3 pb-3">
-                                        <img width="35" src="./images/avatar/2.png" class="mr-3 rounded-circle">
-                                        <div class="media-body">
-                                            <h5>新经理入职</h5>
-                                            <p class="mb-0">几个月前我把它分享到了我的社交主页，</p>
-                                        </div><span class="text-muted ">2018 年 4 月 24 日</span>
-                                    </div>
-                                    <div class="media border-bottom-1 pt-3 pb-3">
-                                        <img width="35" src="./images/avatar/2.png" class="mr-3 rounded-circle">
-                                        <div class="media-body">
-                                            <h5>门店延迟 5 分钟营业</h5>
-                                            <p class="mb-0">几个月前我把它分享到了我的社交主页，</p>
-                                        </div><span class="text-muted ">2018 年 4 月 24 日</span>
-                                    </div>
-                                    <div class="media border-bottom-1 pt-3 pb-3">
-                                        <img width="35" src="./images/avatar/2.png" class="mr-3 rounded-circle">
-                                        <div class="media-body">
-                                            <h5>收到新支持工单</h5>
-                                            <p class="mb-0">几个月前我把它分享到了我的社交主页，</p>
-                                        </div><span class="text-muted ">2018 年 4 月 24 日</span>
-                                    </div>
-                                    <div class="media pt-3 pb-3">
-                                        <img width="35" src="./images/avatar/3.png" class="mr-3 rounded-circle">
-                                        <div class="media-body">
-                                            <h5>Facebook 帖子获 30 条评论</h5>
-                                            <p class="mb-0">几个月前我把它分享到了我的社交主页，</p>
-                                        </div><span class="text-muted ">2018 年 4 月 24 日</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-12 col-sm-12 col-xxl-12">
-                        <div class="card">
-                            <div class="card-body">
-                                    <h4 class="card-title mb-0">门店分布</h4>
-                                <div id="world-map" style="height: 470px;"></div>
-                            </div>        
-                        </div>
-                    </div>
-                </div>
-
-                
-
-                <div class="row">
                         <div class="col-lg-3 col-sm-6">
                             <div class="card">
                                 <div class="social-graph-wrapper widget-facebook">
@@ -756,19 +681,12 @@
     <script src="./plugins/chart.js/Chart.bundle.min.js"></script>
     <!-- 圆形进度条 -->
     <script src="./plugins/circle-progress/circle-progress.min.js"></script>
-    <!-- 世界数据地图（Datamaps） -->
-    <script src="./plugins/d3v3/index.js"></script>
-    <script src="./plugins/topojson/topojson.min.js"></script>
-    <script src="./plugins/datamaps/datamaps.chn.min.js"></script>
     <!-- Morrisjs 图表库 -->
     <script src="./plugins/raphael/raphael.min.js"></script>
     <script src="./plugins/morris/morris.min.js"></script>
     <!-- Pignose 日历 -->
     <script src="./plugins/moment/moment.min.js"></script>
     <script src="./plugins/pg-calendar/js/pignose.calendar.min.js"></script>
-    <!-- ChartistJS 图表库 -->
-    <script src="./plugins/chartist/js/chartist.min.js"></script>
-    <script src="./plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
     <script src="./js/dashboard/dashboard-1.js"></script>
 
 </body>

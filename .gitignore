@@ -11,6 +11,7 @@ Desktop.ini
 .workbuddy/
 .opencode/
 .zcode/
+.qoder/
 *.swp
 *.swo
 .screenshots/
@@ -33,9 +34,12 @@ node_modules/
 css/My css.css
 plugins.md
 
+# 处于正在开发
+simpleweather.html
+webticker.html
+agent/
+
 # 个人笔记
 问题.md
 icons.md
-
-# 其他
-agent/
+安全审计.md

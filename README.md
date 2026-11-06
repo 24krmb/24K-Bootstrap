@@ -12,7 +12,7 @@
 | 类别     | 技术 / 版本      |
 | ------ | ------ |
 | UI 框架  | Bootstrap 4.1.3 |
-| JS 库   | jQuery 3.3.1     |
+| JS 库   | jQuery 3.7.1     |
 | 样式     | SCSS（编译产物 `css/style.css` + source map）  |
 | 字体     | Google Fonts — Noto Sans SC（400/500/700）    |
 | 图表     | Chart.js、Chartist、Morris、Flot、ECharts、Highcharts、C3、Rickshaw、Sparkline、Peity 等                                    |

@@ -79,6 +79,8 @@ npx serve .
 
 > 注意：`css/style.css` 通过 `@import` 引用了 Google Fonts，离线环境会缺少字体但不影响功能。
 
+> **部署提醒**：`python -m http.server` / `npx serve` 会开启目录列表，暴露仓库根目录下的 `.git/`、`.workbuddy/`、`.zcode/`、`agent/` 等内部目录与被 `.gitignore` 忽略的本地笔记文件（这类忽略只防提交、不防访问）。对外部署请只发布静态站点子集（HTML/CSS/JS/图片），或在服务器层禁用目录列表并显式屏蔽点目录。
+
 ## 二次开发
 
 1. **改样式**：所有页面共用 `css/style.css`。若需从源码修改，模板自带 SCSS 结构（Bootstrap SCSS 位于 `plugins/bootstrap/scss/`），改动后需自行用 Sass 编译。

@@ -1,11 +1,10 @@
 const body = $('body');
 const html = $('html');
 
-function quixSettings({version, layout, sidebarStyle, sidebarPosition, headerPosition, containerLayout, direction}) {
+function quixSettings({version, layout, sidebarStyle, headerPosition, containerLayout, direction}) {
     this.version = version || "light";
     this.layout = layout || "vertical";
     this.sidebarStyle = sidebarStyle || "full";
-    this.sidebarPosition = sidebarPosition || "static";
     this.headerPosition = headerPosition || "static";
     this.containerLayout = containerLayout || "wide";
     this.direction = direction || "ltr";
@@ -13,7 +12,6 @@ function quixSettings({version, layout, sidebarStyle, sidebarPosition, headerPos
     this.manageVersion();
     this.manageLayout();
     this.manageSidebarStyle();
-    this.manageSidebarPosition();
     this.manageHeaderPosition();
     this.manageContainerLayout();
     this.manageRtlLayout();
@@ -47,13 +45,7 @@ quixSettings.prototype.manageVersion = function() {
 }
 
 quixSettings.prototype.manageLayout = function() {
-    switch(this.layout) {
-        case "vertical": 
-            body.attr("data-layout", "vertical");
-            break;
-        default:
-            body.attr("data-layout", "vertical");
-    }
+    body.attr("data-layout", "vertical");
 }
 
 quixSettings.prototype.manageSidebarStyle = function() {
@@ -72,19 +64,6 @@ quixSettings.prototype.manageSidebarStyle = function() {
             break;
         default:
             body.attr("data-sidebar-style", "full");
-    }
-}
-
-quixSettings.prototype.manageSidebarPosition = function() {
-    switch(this.sidebarPosition) {
-        case "fixed": 
-            this.sidebarStyle === "overlay" && this.layout === "vertical" ? body.attr("data-sidebar-position", "static") : body.attr("data-sidebar-position", "fixed");
-            break;
-        case "static": 
-            body.attr("data-sidebar-position", "static");
-            break;
-        default: 
-            body.attr("data-sidebar-position", "static");       
     }
 }
 
@@ -156,7 +135,6 @@ quixSettings.prototype.manageResponsiveSidebar = function() {
             if (!s) { return; }
             s.manageLayout();
             s.manageSidebarStyle();
-            s.manageSidebarPosition();
             s.manageHeaderPosition();
             s.manageContainerLayout();
             s.manageResponsiveSidebar();

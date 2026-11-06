@@ -48,10 +48,6 @@ quixSettings.prototype.manageVersion = function() {
 
 quixSettings.prototype.manageLayout = function() {
     switch(this.layout) {
-        case "horizontal": 
-            this.sidebarStyle === "overlay" ? body.attr("data-sidebar-style", "full") : body.attr("data-sidebar-style", `${this.sidebarStyle}`);
-            body.attr("data-layout", "horizontal");
-            break;
         case "vertical": 
             body.attr("data-layout", "vertical");
             break;
@@ -72,7 +68,7 @@ quixSettings.prototype.manageSidebarStyle = function() {
             body.attr("data-sidebar-style", "compact");
             break;
         case "overlay":
-            this.layout === "horizontal" ? body.attr("data-sidebar-style", "full") : body.attr("data-sidebar-style", "overlay");
+            body.attr("data-sidebar-style", "overlay");
             break;
         default:
             body.attr("data-sidebar-style", "full");
@@ -107,12 +103,6 @@ quixSettings.prototype.manageHeaderPosition = function() {
 
 quixSettings.prototype.manageContainerLayout = function() {
     switch(this.containerLayout) {
-        case "boxed":
-            if(this.layout === "vertical" && this.sidebarStyle === "full") {
-                body.attr("data-sidebar-style", "overlay");
-            }
-            body.attr("data-container", "boxed");
-            break;
         case "wide":
             body.attr("data-container", "wide");
             break;

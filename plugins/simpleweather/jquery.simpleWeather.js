@@ -21,7 +21,9 @@
       }, options);
 
       var now = new Date();
-      var weatherUrl = 'https://query.yahooapis.com/v1/public/yql?format=json&rnd=' + now.getFullYear() + now.getMonth() + now.getDay() + now.getHours() + '&diagnostics=true&callback=?&q=';
+      /* base 与 yql 分离：yql 整串经 encodeURIComponent，引号/空格均转义，无法逃逸字符串 */
+      var yql = '';
+      var unit = (options.unit === 'c') ? 'c' : 'f';
 
       if(options.location !== '') {
         /* If latitude/longitude coordinates, need to format a little different. */
@@ -32,16 +34,16 @@
           location = options.location;
         }
 
-        weatherUrl += 'select * from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '") and u="' + options.unit + '"';
-      } else if(options.woeid !== '') {
-        weatherUrl += 'select * from weather.forecast where woeid=' + options.woeid + ' and u="' + options.unit + '"';
+        yql = 'select * from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '") and u="' + unit + '"';
+      } else if(/^\d+$/.test(String(options.woeid))) {
+        yql = 'select * from weather.forecast where woeid=' + options.woeid + ' and u="' + unit + '"';
       } else {
         options.error('Could not retrieve weather due to an invalid location.');
         return false;
       }
 
       $.getJSON(
-        encodeURI(weatherUrl),
+        'https://query.yahooapis.com/v1/public/yql?format=json&rnd=' + now.getFullYear() + now.getMonth() + now.getDay() + now.getHours() + '&diagnostics=true&callback=?&q=' + encodeURIComponent(yql),
         function(data) {
           if(data !== null && data.query !== null && data.query.results !== null && data.query.results.channel.description !== 'Yahoo! Weather Error') {
             var result = data.query.results.channel,

@@ -32,7 +32,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 html {scrollbar-width: none;-ms-overflow-style: none}html::-webkit-scrollbar {display: none}html {line-height: 1.15;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;-ms-overflow-style: scrollbar;-webkit-tap-highlight-color: rgba(0, 0, 0, 0)}@-ms-viewport {width: device-width}article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {display: block}
 body[data-theme-version="dark"] {/* 暗色覆盖 */
   --primary:#66f;--menu-hover-bg:rgba(244, 209, 180,.1);--item-hover-bg: rgba(244, 209, 180,.1);
-  --bc1: #171E44;--bc2:rgba(255, 255, 255, 0.07);--bc3:#414141;
+  --bc1: #171E44;--bc2:rgba(255, 255, 255, 0.07);--bc3:#272E51;
   --border:rgba(255,255,255,0.1);--box-shadow:none;
   --fc1:rgb(255, 255, 255);--fc2:rgba(255, 255, 255,.7);--btntxt:#000;
   --24k-bg-sidebar: #232323;
@@ -47,7 +47,8 @@ body[data-theme-version="dark"] {/* 暗色覆盖 */
   body {/* 24K 主题变量（亮色默认） */
   --primary:#66F;--menu-hover-bg:rgba(117, 113, 249,.1);--24k-menu-hover-text: var(--primary);
   --item-hover-bg: rgba(117, 113, 249,.1);
-  --bc1: #F3F3F9;--bc2: #fff;--border:rgb(214,227,255);--box-shadow:rgba(102, 102, 255,.1);
+  --bc1: #F3F3F9;--bc2: #fff;--bc3:#fff;
+  --border:rgb(214,227,255);--box-shadow:rgba(102, 102, 255,.1);
   --fc1:#183153;--fc2:#73757a;--btntxt:#fff;
   --24k-bg-sidebar: #fff;
   --24k-bg-sidebar-sub: #fafafa;
@@ -606,15 +607,15 @@ button.close{padding:0;background-color:transparent;border:0;-webkit-appearance:
 .modal.show .modal-dialog{transform:translate(0,0)}
 .modal-dialog-centered{display:flex;align-items:center;min-height:calc(100% - (.5rem * 2))}
 .modal-dialog-centered::before{display:block;height:calc(100vh - (.5rem * 2));content:""}
-.modal-content{position:relative;display:flex;flex-direction:column;width:100%;pointer-events:auto;background-color:#fff;background-clip:padding-box;border:1px solid rgba(0,0,0,.2);border-radius:.3rem;outline:0}
+.modal-content{position:relative;display:flex;flex-direction:column;width:100%;pointer-events:auto;background-color:var(--bc3);background-clip:padding-box;border:1px solid var(--border);border-radius:var(--radius);outline:0}
 .modal-backdrop{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1040;background-color:#000}
 .modal-backdrop.fade{opacity:0}
 .modal-backdrop.show{opacity:.5}
-.modal-header{display:flex;align-items:flex-start;justify-content:space-between;padding:1rem;border-bottom:1px solid #e9ecef;border-top-left-radius:.3rem;border-top-right-radius:.3rem}
+.modal-header{display:flex;align-items:flex-start;justify-content:space-between;padding:1rem;border-bottom:1px solid var(--border);border-top-left-radius:.3rem;border-top-right-radius:.3rem}
 .modal-header .close{padding:1rem;margin:-1rem -1rem -1rem auto}
 .modal-title{margin-bottom:0;line-height:1.5}
 .modal-body{position:relative;flex:1 1 auto;padding:1rem}
-.modal-footer{display:flex;align-items:center;justify-content:flex-end;padding:1rem;border-top:1px solid #e9ecef}
+.modal-footer{display:flex;align-items:center;justify-content:flex-end;padding:1rem;border-top:1px solid var(--border)}
 .modal-footer>:not(:first-child){margin-left:.25rem}
 .modal-footer>:not(:last-child){margin-right:.25rem}
 .modal-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}

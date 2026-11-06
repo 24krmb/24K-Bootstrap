@@ -1,18 +1,16 @@
 const body = $('body');
 const html = $('html');
 
-function quixSettings({version, layout, sidebarStyle, headerPosition, containerLayout, direction}) {
+function quixSettings({version, layout, sidebarStyle, containerLayout, direction}) {
     this.version = version || "light";
     this.layout = layout || "vertical";
     this.sidebarStyle = sidebarStyle || "full";
-    this.headerPosition = headerPosition || "static";
     this.containerLayout = containerLayout || "wide";
     this.direction = direction || "ltr";
 
     this.manageVersion();
     this.manageLayout();
     this.manageSidebarStyle();
-    this.manageHeaderPosition();
     this.manageContainerLayout();
     this.manageRtlLayout();
     this.manageResponsiveSidebar();
@@ -64,19 +62,6 @@ quixSettings.prototype.manageSidebarStyle = function() {
             break;
         default:
             body.attr("data-sidebar-style", "full");
-    }
-}
-
-quixSettings.prototype.manageHeaderPosition = function() {
-    switch(this.headerPosition) {
-        case "fixed": 
-            body.attr("data-header-position", "fixed");
-            break;
-        case "static": 
-            body.attr("data-header-position", "static");
-            break;
-        default: 
-            body.attr("data-header-position", "static");       
     }
 }
 
@@ -135,7 +120,6 @@ quixSettings.prototype.manageResponsiveSidebar = function() {
             if (!s) { return; }
             s.manageLayout();
             s.manageSidebarStyle();
-            s.manageHeaderPosition();
             s.manageContainerLayout();
             s.manageResponsiveSidebar();
         }, 250);

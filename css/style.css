@@ -33,7 +33,6 @@ body[data-theme-version="dark"] {/* 暗色覆盖 */
   --primary:#66f;--menu-hover-bg:rgba(244, 209, 180,.1);--item-hover-bg: rgba(244, 209, 180,.1);
   --bc1: #171E44;
   --bg-image: linear-gradient(#203580 0px,#443E73 60px,#443A66 300px,#27284F 600px,#171E44 1000px);
-  --header-bg: rgba(255,255,255,.08);
   --bc2:rgba(255, 255, 255, 0.05);
   --bc3:#272E51;
   --border:rgba(255,255,255,0.1);--box-shadow:rgba(102, 102, 255,.1);
@@ -54,7 +53,7 @@ body[data-theme-version="dark"] {/* 暗色覆盖 */
 body {/* 24K 主题变量（亮色默认） */
   --primary:#66F;--menu-hover-bg:rgba(117, 113, 249,.1);--24k-menu-hover-text: var(--primary);
   --item-hover-bg: rgba(117, 113, 249,.1);
-  --bc1: #F3F3F9;--bc2: #fff;--bc3:#fff;--bg-image: none;--header-bg: rgba(255,255,255,.65);
+  --bc1: #F3F3F9;--bc2: #fff;--bc3:#fff;--bg-image: none;
   --border:rgb(214,227,255);--box-shadow:rgba(102, 102, 255,.1);
   --fc1:rgb(24, 49, 83);--fc2:rgba(24, 49, 83,.8);--btntxt:#fff;
   --24k-bg-sidebar: #fff;
@@ -1235,7 +1234,7 @@ button.bg-dark:focus {
   top: 46%;
   transform: translateY(-50%)}@media (max-width: 575.98px) {.nav-control {
       left: .4375rem}}.nav-control .hamburger.active {
-    z-index: -1}.hamburger{display:inline-block;right:0;position:relative;top:.125rem;-webkit-transition:all .3s ease-in-out 0s;transition:all .3s ease-in-out 0s;width:2.3125rem;z-index:999}.hamburger.is-active{left:0;z-index:9}.hamburger .toggle-icon {font-size: 1.4rem;line-height: 2rem;color: var(--primary)}.hamburger:hover {cursor: pointer}@media (min-width:767px){[data-sidebar-style=compact] .nav-control{display:none}[data-sidebar-style=compact] .nav-header{width:9.375rem}}[data-sidebar-style=full][data-layout=vertical] .menu-toggle .brand-title{display:none}[data-sidebar-style=full][data-layout=vertical] .menu-toggle .nav-header .logo-abbr{display:block}[data-sidebar-style=mini] .nav-header .logo-abbr{display:block}[data-sidebar-style=compact] .nav-header .brand-title{display:none}[data-sidebar-style=compact] .nav-header .logo-compact{display:block}.header{height:3rem;z-index:1;position:relative;padding:0 .9375rem;background-color:var(--header-bg);backdrop-filter:blur(12px) saturate(160%);-webkit-backdrop-filter:blur(12px) saturate(160%);margin-left:10.1875rem;transition:all .2s ease}.header .header-content{height:100%}@media (max-width:767px){.nav-header{width:3.75rem}.nav-header .brand-title{display:none}.header-content{margin-left:3.75rem}[direction=rtl] .header-content{margin-left:0}}[data-sidebar-style="full"] .header, [data-sidebar-style="overlay"] .header {
+    z-index: -1}.hamburger{display:inline-block;right:0;position:relative;top:.125rem;-webkit-transition:all .3s ease-in-out 0s;transition:all .3s ease-in-out 0s;width:2.3125rem;z-index:999}.hamburger.is-active{left:0;z-index:9}.hamburger .toggle-icon {font-size: 1.4rem;line-height: 2rem;color: var(--primary)}.hamburger:hover {cursor: pointer}@media (min-width:767px){[data-sidebar-style=compact] .nav-control{display:none}[data-sidebar-style=compact] .nav-header{width:9.375rem}}[data-sidebar-style=full][data-layout=vertical] .menu-toggle .brand-title{display:none}[data-sidebar-style=full][data-layout=vertical] .menu-toggle .nav-header .logo-abbr{display:block}[data-sidebar-style=mini] .nav-header .logo-abbr{display:block}[data-sidebar-style=compact] .nav-header .brand-title{display:none}[data-sidebar-style=compact] .nav-header .logo-compact{display:block}.header{height:3rem;z-index:1;position:relative;padding:0 .9375rem;backdrop-filter:blur(12px) saturate(160%);-webkit-backdrop-filter:blur(12px) saturate(160%);margin-left:10.1875rem;transition:all .2s ease}.header .header-content{height:100%}@media (max-width:767px){.nav-header{width:3.75rem}.nav-header .brand-title{display:none}.header-content{margin-left:3.75rem}[direction=rtl] .header-content{margin-left:0}}[data-sidebar-style="full"] .header, [data-sidebar-style="overlay"] .header {
   width: calc(100% - 10.1875rem)}@media only screen and (min-width: 1200px) and (max-width: 1350px) {[data-sidebar-style="full"] .header, [data-sidebar-style="overlay"] .header {
       width: calc(100% - 14.375rem);
       margin-left: 14.375rem}}@media only screen and (max-width: 767px) {[data-sidebar-style="full"] .header, [data-sidebar-style="overlay"] .header {

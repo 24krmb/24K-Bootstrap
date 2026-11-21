@@ -16,7 +16,7 @@
 | 样式     | SCSS（编译产物 `css/style.css` + source map）  |
 | 字体     | Google Fonts — Noto Sans SC（400/500/700）    |
 | 图表     | Chart.js、Chartist、Morris、Flot、ECharts、Highcharts、C3、Rickshaw、Sparkline、Peity 等                                    |
-| 图标     | Font Awesome、Material Design Icons、Themify、Ionicons、Simple Line Icons、Weather Icons、Flag Icons、CryptoCoins 等 10 套 |
+| 图标     | Font Awesome、Material Design Icons、Themify、Ionicons、Simple Line Icons、Weather Icons、Flag Icons 等 9 套 |
 | 数据表格   | DataTables、FooTable、jsGrid、jQuery Bootgrid                                                                        |
 | 其他常用插件 | FullCalendar、SweetAlert(2)、Toastr、Select2、DataMaps、Moment.js、NouiSlider、Dropify、Cropper.js 等 120+ 插件              |
 
@@ -49,12 +49,11 @@
 
 ## 图标库
 
-项目自带 5 套图标库（位于 `icons/`），全部由 `css/style.css` 顶部 `@import` 统一加载，页面无需单独引用。
+项目自带 4 套图标库（位于 `icons/`），全部由 `css/style.css` 顶部 `@import` 统一加载，页面无需单独引用。
 
 | 图标库 | 类名前缀 | 版本 | 图标数量 |
 | --- | --- | --- | --- | --- |
 | Font Awesome | `fa fa-*` | 4.7.0 | 786 |
-| Cryptocoins | `cc` + 币种类 | 未标注 | 144 币种 |
 | PE Icon Set – Weather | `pe-is-w-*` | 未标注 | 208 |
 | Flag Icons | `flag-icon-*`（SVG） | 未标注 | 249 国旗 |
 
